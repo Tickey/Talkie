@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/topAnim_1"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+        android:gravity="center_vertical|center_horizontal"
+    	android:orientation="horizontal" >
+	    <ImageView
+	        android:id="@+id/animationImage_1_1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:src="@drawable/animation_1_1"
+	        android:layout_marginRight="10dp"
+	        android:visibility="invisible" />
+	
+	    <ImageView
+	        android:id="@+id/animationImage_1_2"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:src="@drawable/animation_1_2"
+	        android:visibility="invisible" />
+	    
+	</LinearLayout>
+	
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/topAnim_1"
+        android:layout_below="@+id/topAnim_1"
+        android:layout_marginTop="5dp"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="horizontal" >
+	    
+	    <ImageView
+	        android:id="@+id/animationImage_1_3"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:src="@drawable/animation_1_3"
+	        android:layout_marginRight="10dp"
+	        android:visibility="invisible" />
+	
+	    <ImageView
+	        android:id="@+id/animationImage_1_4"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:src="@drawable/animation_1_4"
+	        android:layout_marginRight="10dp"
+	        android:visibility="invisible" />
+
+	    <ImageView
+	        android:id="@+id/animationImage_1_5"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:src="@drawable/animation_1_5"
+	        android:visibility="invisible" />
+
+	</LinearLayout>
+</RelativeLayout>
