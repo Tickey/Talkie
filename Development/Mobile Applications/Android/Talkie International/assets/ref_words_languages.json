@@ -1,0 +1,704 @@
+[
+	{
+		"word_id" : 1,
+		"drawable" : "elephant",
+		"raw" : "en_elephant.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 2,
+		"drawable" : "lion",
+		"raw" : "en_lion.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 3,
+		"drawable" : "penguin",
+		"raw" : "en_penguin.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 4,
+		"drawable" : "bear",
+		"raw" : "en_bear.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 5,
+		"drawable" : "giraffe",
+		"raw" : "en_giraffe.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 6,
+		"drawable" : "hippo",
+		"raw" : "en_hippo.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 7,
+		"drawable" : "monkey",
+		"raw" : "en_monkey.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 8,
+		"drawable" : "turtle",
+		"raw" : "en_turtle.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 9,
+		"drawable" : "zebra",
+		"raw" : "en_zebra.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 10,
+		"drawable" : "apple",
+		"raw" : "en_apple.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 11,
+		"drawable" : "banana",
+		"raw" : "en_banana.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 12,
+		"drawable" : "orange",
+		"raw" : "en_orange.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 13,
+		"drawable" : "strawberry",
+		"raw" : "en_strawberry.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 14,
+		"drawable" : "tomato",
+		"raw" : "en_tomato.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 15,
+		"drawable" : "potato",
+		"raw" : "en_potato.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 16,
+		"drawable" : "pepper",
+		"raw" : "en_pepper.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 17,
+		"drawable" : "kiwi",
+		"raw" : "en_kiwi.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 18,
+		"drawable" : "broccoli",
+		"raw" : "en_broccoli.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 19,
+		"drawable" : "girl",
+		"raw" : "en_girl.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 20,
+		"drawable" : "boy",
+		"raw" : "en_boy.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 21,
+		"drawable" : "baby",
+		"raw" : "en_baby.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 22,
+		"drawable" : "woman",
+		"raw" : "en_woman.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 23,
+		"drawable" : "man",
+		"raw" : "en_man.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 24,
+		"drawable" : "dog",
+		"raw" : "en_dog.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 25,
+		"drawable" : "cat",
+		"raw" : "en_cat.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 26,
+		"drawable" : "parrot",
+		"raw" : "en_parrot.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 27,
+		"drawable" : "rabbit",
+		"raw" : "en_rabbit.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 28,
+		"drawable" : "white",
+		"raw" : "en_white.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 29,
+		"drawable" : "yellow",
+		"raw" : "en_yellow.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 30,
+		"drawable" : "orange",
+		"raw" : "en_orange.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 31,
+		"drawable" : "red",
+		"raw" : "en_red.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 32,
+		"drawable" : "pink",
+		"raw" : "en_pink.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 33,
+		"drawable" : "purple",
+		"raw" : "en_purple.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 34,
+		"drawable" : "blue",
+		"raw" : "en_blue.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 35,
+		"drawable" : "green",
+		"raw" : "en_green.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 36,
+		"drawable" : "black",
+		"raw" : "en_black.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 37,
+		"drawable" : "chair",
+		"raw" : "en_chair.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 38,
+		"drawable" : "table",
+		"raw" : "en_table.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 39,
+		"drawable" : "sofa",
+		"raw" : "en_sofa.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 40,
+		"drawable" : "armchair",
+		"raw" : "en_armchair.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 41,
+		"drawable" : "lamp",
+		"raw" : "en_lamp.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 42,
+		"drawable" : "shelf",
+		"raw" : "en_shelf.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 43,
+		"drawable" : "wardrobe",
+		"raw" : "en_wardrobe.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 44,
+		"drawable" : "desk",
+		"raw" : "en_desk.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 45,
+		"drawable" : "door",
+		"raw" : "en_door.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 46,
+		"drawable" : "sandwich",
+		"raw" : "en_sandwich.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 47,
+		"drawable" : "salad",
+		"raw" : "en_salad.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 48,
+		"drawable" : "chicken",
+		"raw" : "en_chicken.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 49,
+		"drawable" : "cake",
+		"raw" : "en_cake.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 50,
+		"drawable" : "ice cream",
+		"raw" : "en_ice_cream.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 51,
+		"drawable" : "chocolate",
+		"raw" : "en_chocolate.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 52,
+		"drawable" : "water",
+		"raw" : "en_water.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 53,
+		"drawable" : "juice",
+		"raw" : "en_juice.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 54,
+		"drawable" : "milk",
+		"raw" : "en_milk.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 55,
+		"drawable" : "hand",
+		"raw" : "en_hand.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 56,
+		"drawable" : "arm",
+		"raw" : "en_arm.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 57,
+		"drawable" : "leg",
+		"raw" : "en_leg.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 58,
+		"drawable" : "foot",
+		"raw" : "en_foot.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 59,
+		"drawable" : "head",
+		"raw" : "en_head.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 60,
+		"drawable" : "eye",
+		"raw" : "en_eye.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 61,
+		"drawable" : "nose",
+		"raw" : "en_nose.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 62,
+		"drawable" : "mouth",
+		"raw" : "en_mouth.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 63,
+		"drawable" : "hair",
+		"raw" : "en_hair.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 64,
+		"drawable" : "tall",
+		"raw" : "en_tall.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 65,
+		"drawable" : "short",
+		"raw" : "en_short.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 66,
+		"drawable" : "weak",
+		"raw" : "en_weak.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 67,
+		"drawable" : "strong",
+		"raw" : "en_strong.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 68,
+		"drawable" : "surprised",
+		"raw" : "en_surprised.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 69,
+		"drawable" : "angry",
+		"raw" : "en_angry.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 70,
+		"drawable" : "scared",
+		"raw" : "en_scared.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 71,
+		"drawable" : "excited",
+		"raw" : "en_excited.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 72,
+		"drawable" : "happy",
+		"raw" : "en_happy.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 73,
+		"drawable" : "sun",
+		"raw" : "en_sun.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 74,
+		"drawable" : "cloud",
+		"raw" : "en_cloud.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 75,
+		"drawable" : "park",
+		"raw" : "en_park.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 76,
+		"drawable" : "grass",
+		"raw" : "en_grass.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 77,
+		"drawable" : "tree",
+		"raw" : "en_tree.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 78,
+		"drawable" : "bench",
+		"raw" : "en_bench.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 79,
+		"drawable" : "skateboard",
+		"raw" : "en_skateboard.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 80,
+		"drawable" : "ball",
+		"raw" : "en_ball.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 81,
+		"drawable" : "kite",
+		"raw" : "en_kite.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 82,
+		"drawable" : "house",
+		"raw" : "en_house.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 83,
+		"drawable" : "roof",
+		"raw" : "en_roof.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 84,
+		"drawable" : "wall",
+		"raw" : "en_wall.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 85,
+		"drawable" : "window",
+		"raw" : "en_window.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 86,
+		"drawable" : "chimney",
+		"raw" : "en_chimney.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 87,
+		"drawable" : "room",
+		"raw" : "en_room.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 88,
+		"drawable" : "stairs",
+		"raw" : "en_stairs.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 89,
+		"drawable" : "doorbell",
+		"raw" : "en_doorbell.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 90,
+		"drawable" : "garden",
+		"raw" : "en_garden.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 91,
+		"drawable" : "sea",
+		"raw" : "en_sea.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 92,
+		"drawable" : "beach",
+		"raw" : "en_beach.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 93,
+		"drawable" : "umbrella",
+		"raw" : "en_umbrella.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 94,
+		"drawable" : "sand",
+		"raw" : "en_sand.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 95,
+		"drawable" : "spade",
+		"raw" : "en_spade.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 96,
+		"drawable" : "bucket",
+		"raw" : "en_bucket.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 97,
+		"drawable" : "sandcastle",
+		"raw" : "en_sandcastle.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 98,
+		"drawable" : "boat",
+		"raw" : "en_boat.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 99,
+		"drawable" : "shell",
+		"raw" : "en_shell.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 100,
+		"drawable" : "bathroom",
+		"raw" : "en_bathroom.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 101,
+		"drawable" : "toilet",
+		"raw" : "en_toilet.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 102,
+		"drawable" : "shower",
+		"raw" : "en_shower.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 103,
+		"drawable" : "bath",
+		"raw" : "en_bath.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 104,
+		"drawable" : "sink",
+		"raw" : "en_sink.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 105,
+		"drawable" : "towel",
+		"raw" : "en_towel.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 106,
+		"drawable" : "soap",
+		"raw" : "en_soap.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 107,
+		"drawable" : "toothbrush",
+		"raw" : "en_toothbrush.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 108,
+		"drawable" : "mirror",
+		"raw" : "en_mirror.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 109,
+		"drawable" : "spoon",
+		"raw" : "en_spoon.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 110,
+		"drawable" : "fork",
+		"raw" : "en_fork.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 111,
+		"drawable" : "bottle",
+		"raw" : "en_bottle.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 112,
+		"drawable" : "plate",
+		"raw" : "en_plate.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 113,
+		"drawable" : "cup",
+		"raw" : "en_cup.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 114,
+		"drawable" : "hot",
+		"raw" : "en_hot.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 115,
+		"drawable" : "cold",
+		"raw" : "en_cold.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 116,
+		"drawable" : "big",
+		"raw" : "en_big.mp3",
+		"language_id" : 1
+	},
+	{
+		"word_id" : 117,
+		"drawable" : "small",
+		"raw" : "en_small.mp3",
+		"language_id" : 1
+	}
+]

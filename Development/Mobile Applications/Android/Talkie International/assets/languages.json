@@ -1,0 +1,12 @@
+[
+	{
+		"id" : 1,
+		"name" : "english",
+		"flag_drawable" : "english.png"
+	},
+	{
+		"id" : 2,
+		"name" : "bulgarian",
+		"flag_drawable" : "bulgarian.png"
+	}
+]

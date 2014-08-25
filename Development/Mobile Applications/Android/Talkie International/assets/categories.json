@@ -1,0 +1,80 @@
+[
+	{
+		"id" : 1,
+		"closed_drawable": "closed_cat_1.png",
+		"opened_drawable": "opened_cat_1.png",
+		"unavailable_drawable": "unavailable_cat_1.png"
+	},
+	{
+		"id" : 2,
+		"closed_drawable": "closed_cat_2.png",
+		"opened_drawable": "opened_cat_2.png",
+		"unavailable_drawable": "unavailable_cat_2.png"
+	},
+	{
+		"id" : 3,
+		"closed_drawable": "closed_cat_3.png",
+		"opened_drawable": "opened_cat_3.png",
+		"unavailable_drawable": "unavailable_cat_3.png"
+	},
+	{
+		"id" : 4,
+		"closed_drawable": "closed_cat_4.png",
+		"opened_drawable": "opened_cat_4.png",
+		"unavailable_drawable": "unavailable_cat_4.png"
+	},
+	{
+		"id" : 5,
+		"closed_drawable": "closed_cat_5.png",
+		"opened_drawable": "opened_cat_5.png",
+		"unavailable_drawable": "unavailable_cat_5.png"
+	},
+	{
+		"id" : 6,
+		"closed_drawable": "closed_cat_6.png",
+		"opened_drawable": "opened_cat_6.png",
+		"unavailable_drawable": "unavailable_cat_6.png"
+	},
+	{
+		"id" : 7,
+		"closed_drawable": "closed_cat_7.png",
+		"opened_drawable": "opened_cat_7.png",
+		"unavailable_drawable": "unavailable_cat_7.png"
+	},
+	{
+		"id" : 8,
+		"closed_drawable": "closed_cat_8.png",
+		"opened_drawable": "opened_cat_8.png",
+		"unavailable_drawable": "unavailable_cat_8.png"
+	},
+	{
+		"id" : 9,
+		"closed_drawable": "closed_cat_9.png",
+		"opened_drawable": "opened_cat_9.png",
+		"unavailable_drawable": "unavailable_cat_9.png"
+	},
+	{
+		"id" : 10,
+		"closed_drawable": "closed_cat_10.png",
+		"opened_drawable": "opened_cat_10.png",
+		"unavailable_drawable": "unavailable_cat_10.png"
+	},
+	{
+		"id" : 11,
+		"closed_drawable": "closed_cat_11.png",
+		"opened_drawable": "opened_cat_11.png",
+		"unavailable_drawable": "unavailable_cat_11.png"
+	},
+	{
+		"id" : 12,
+		"closed_drawable": "closed_cat_12.png",
+		"opened_drawable": "opened_cat_12.png",
+		"unavailable_drawable": "unavailable_cat_12.png"
+	},
+	{
+		"id" : 13,
+		"closed_drawable": "closed_cat_13.png",
+		"opened_drawable": "opened_cat_13.png",
+		"unavailable_drawable": "unavailable_cat_13.png"
+	}
+]
