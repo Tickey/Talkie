@@ -1,0 +1,1887 @@
+[
+	{
+		"is_available": true,
+		"is_started": false,
+		"closed_drawable": "closed_cat_1.png",
+		"opened_drawable": "opened_cat_1.png",
+		"unavailable_drawable": "unavailable_cat_1.png",
+		"words":
+			[
+				{
+					"english_word": "elephant",
+					"bulgarian_word": "момиче",
+					"english_sound": "en_elephant.mp3",
+					"bulgarian_sound": "belephant.mp3",
+					"drawable": "elephant.png",
+					"bulgarian" : {
+							"is_available": true,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": true,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "lion",
+					"bulgarian_word": "момче",
+					"english_sound": "en_lion.mp3",
+					"bulgarian_sound": "lion.mp3",
+					"drawable": "lion.png",
+					"bulgarian" : {
+							"is_available": true,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": true,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "penguin",
+					"bulgarian_word": "бебе",
+					"english_sound": "en_penguin.mp3",
+					"bulgarian_sound": "bpenguin.mp3",
+					"drawable": "penguin.png",
+					"bulgarian" : {
+							"is_available": true,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": true,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "bear",
+					"bulgarian_word": "жена",
+					"english_sound": "en_bear.mp3",
+					"bulgarian_sound": "bgbear.mp3",
+					"drawable": "bear.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "giraffe",
+					"bulgarian_word": "мъж",
+					"english_sound": "en_giraffe.mp3",
+					"bulgarian_sound": "giraffe.mp3",
+					"drawable": "giraffe.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "hippo",
+					"bulgarian_word": "куче",
+					"english_sound": "en_hippo.mp3",
+					"bulgarian_sound": "hippo.mp3",
+					"drawable": "hippo.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "monkey",
+					"bulgarian_word": "коте",
+					"english_sound": "en_monkey.mp3",
+					"bulgarian_sound": "monkey.mp3",
+					"drawable": "monkey.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "turtle",
+					"bulgarian_word": "папагал",
+					"english_sound": "en_turtle.mp3",
+					"bulgarian_sound": "bg_turtle.mp3",
+					"drawable": "turtle.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "zebra",
+					"bulgarian_word": "заек",
+					"english_sound": "en_zebra.mp3",
+					"bulgarian_sound": "bg_zebra.mp3",
+					"drawable": "zebra.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				}
+			]
+	},
+	{
+		"is_available": true,
+		"is_started": false,
+		"closed_drawable": "closed_cat_2.png",
+		"opened_drawable": "opened_cat_2.png",
+		"unavailable_drawable": "unavailable_cat_2.png",
+		"words":
+			[
+				{
+					"english_word": "girl",
+					"bulgarian_word": "момиче",
+					"english_sound": "en_girl.mp3",
+					"bulgarian_sound": "bg_girl.mp3",
+					"drawable": "girl.png",
+					"bulgarian" : {
+							"is_available": true,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": true,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "boy",
+					"bulgarian_word": "момче",
+					"english_sound": "en_boy.mp3",
+					"bulgarian_sound": "bg_boy.mp3",
+					"drawable": "boy.png",
+					"bulgarian" : {
+							"is_available": true,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": true,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "baby",
+					"bulgarian_word": "бебе",
+					"english_sound": "en_baby.mp3",
+					"bulgarian_sound": "bg_baby.mp3",
+					"drawable": "baby.png",
+					"bulgarian" : {
+							"is_available": true,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": true,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "woman",
+					"bulgarian_word": "жена",
+					"english_sound": "en_woman.mp3",
+					"bulgarian_sound": "bg_woman.mp3",
+					"drawable": "woman.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "man",
+					"bulgarian_word": "мъж",
+					"english_sound": "en_man.mp3",
+					"bulgarian_sound": "bg_man.mp3",
+					"drawable": "man.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "dog",
+					"bulgarian_word": "куче",
+					"english_sound": "en_dog.mp3",
+					"bulgarian_sound": "bg_dog.mp3",
+					"drawable": "dog.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "cat",
+					"bulgarian_word": "коте",
+					"english_sound": "en_cat.mp3",
+					"bulgarian_sound": "bg_cat.mp3",
+					"drawable": "cat.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "parrot",
+					"bulgarian_word": "папагал",
+					"english_sound": "en_parrot.mp3",
+					"bulgarian_sound": "bg_parrot.mp3",
+					"drawable": "parrot.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "rabbit",
+					"bulgarian_word": "заек",
+					"english_sound": "en_rabbit.mp3",
+					"bulgarian_sound": "bg_rabbit.mp3",
+					"drawable": "rabbit.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				}
+			]
+	},
+	{
+		"is_available": true,
+		"is_started": false,
+		"closed_drawable": "closed_cat_3.png",
+		"opened_drawable": "opened_cat_3.png",
+		"unavailable_drawable": "unavailable_cat_3.png",
+		"words":
+			[
+				{
+					"english_word": "girl",
+					"bulgarian_word": "момиче",
+					"english_sound": "en_girl.mp3",
+					"bulgarian_sound": "bg_girl.mp3",
+					"drawable": "girl.png",
+					"bulgarian" : {
+							"is_available": true,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": true,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "boy",
+					"bulgarian_word": "момче",
+					"english_sound": "en_boy.mp3",
+					"bulgarian_sound": "bg_boy.mp3",
+					"drawable": "boy.png",
+					"bulgarian" : {
+							"is_available": true,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": true,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "baby",
+					"bulgarian_word": "бебе",
+					"english_sound": "en_baby.mp3",
+					"bulgarian_sound": "bg_baby.mp3",
+					"drawable": "baby.png",
+					"bulgarian" : {
+							"is_available": true,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": true,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "woman",
+					"bulgarian_word": "жена",
+					"english_sound": "en_woman.mp3",
+					"bulgarian_sound": "bg_woman.mp3",
+					"drawable": "woman.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "man",
+					"bulgarian_word": "мъж",
+					"english_sound": "en_man.mp3",
+					"bulgarian_sound": "bg_man.mp3",
+					"drawable": "man.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "dog",
+					"bulgarian_word": "куче",
+					"english_sound": "en_dog.mp3",
+					"bulgarian_sound": "bg_dog.mp3",
+					"drawable": "dog.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "cat",
+					"bulgarian_word": "коте",
+					"english_sound": "en_cat.mp3",
+					"bulgarian_sound": "bg_cat.mp3",
+					"drawable": "cat.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "parrot",
+					"bulgarian_word": "папагал",
+					"english_sound": "en_parrot.mp3",
+					"bulgarian_sound": "bg_parrot.mp3",
+					"drawable": "parrot.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "rabbit",
+					"bulgarian_word": "заек",
+					"english_sound": "en_rabbit.mp3",
+					"bulgarian_sound": "bg_rabbit.mp3",
+					"drawable": "rabbit.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				}
+			]
+	},
+	{
+		"is_available": true,
+		"is_started": false,
+		"closed_drawable": "closed_cat_4.png",
+		"opened_drawable": "opened_cat_4.png",
+		"unavailable_drawable": "unavailable_cat_4.png",
+		"words":
+			[
+				{
+					"english_word": "white",
+					"bulgarian_word": "бял",
+					"english_sound": "en_white.mp3",
+					"bulgarian_sound": "bg_white.mp3",
+					"drawable": "white.png",
+					"bulgarian" : {
+							"is_available": true,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": true,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "yellow",
+					"bulgarian_word": "жълт",
+					"english_sound": "en_yellow.mp3",
+					"bulgarian_sound": "bg_yellow.mp3",
+					"drawable": "yellow.png",
+					"bulgarian" : {
+							"is_available": true,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": true,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "orange",
+					"bulgarian_word": "оранжев",
+					"english_sound": "en_orange.mp3",
+					"bulgarian_sound": "bg_orange.mp3",
+					"drawable": "orange.png",
+					"bulgarian" : {
+							"is_available": true,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": true,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "red",
+					"bulgarian_word": "червен",
+					"english_sound": "en_red.mp3",
+					"bulgarian_sound": "bg_red.mp3",
+					"drawable": "red.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "pink",
+					"bulgarian_word": "розов",
+					"english_sound": "en_pink.mp3",
+					"bulgarian_sound": "bg_pink.mp3",
+					"drawable": "pink.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "purple",
+					"bulgarian_word": "лилав",
+					"english_sound": "en_purple.mp3",
+					"bulgarian_sound": "bg_purple.mp3",
+					"drawable": "purple.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "blue",
+					"bulgarian_word": "син",
+					"english_sound": "en_blue.mp3",
+					"bulgarian_sound": "bg_blue.mp3",
+					"drawable": "blue.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "green",
+					"bulgarian_word": "зелен",
+					"english_sound": "en_green.mp3",
+					"bulgarian_sound": "bg_green.mp3",
+					"drawable": "green.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "black",
+					"bulgarian_word": "черен",
+					"english_sound": "en_black.mp3",
+					"bulgarian_sound": "bg_black.mp3",
+					"drawable": "black.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				}
+			]
+	},
+	{
+		"is_available": false,
+		"is_started": false,
+		"closed_drawable": "closed_cat_5.png",
+		"opened_drawable": "opened_cat_5.png",
+		"unavailable_drawable": "unavailable_cat_5.png",
+		"words":
+			[
+				{
+					"english_word": "chair",
+					"bulgarian_word": "стол",
+					"english_sound": "en_chair.mp3",
+					"bulgarian_sound": "bg_chair.mp3",
+					"drawable": "chair.png",
+					"bulgarian" : {
+							"is_available": true,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": true,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "table",
+					"bulgarian_word": "маса",
+					"english_sound": "en_table.mp3",
+					"bulgarian_sound": "bg_table.mp3",
+					"drawable": "table.png",
+					"bulgarian" : {
+							"is_available": true,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": true,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "sofa",
+					"bulgarian_word": "диван",
+					"english_sound": "en_sofa.mp3",
+					"bulgarian_sound": "bg_sofa.mp3",
+					"drawable": "sofa.png",
+					"bulgarian" : {
+							"is_available": true,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": true,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "armchair",
+					"bulgarian_word": "кресло",
+					"english_sound": "en_armchair.mp3",
+					"bulgarian_sound": "bg_armchair.mp3",
+					"drawable": "armchair.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "lamp",
+					"bulgarian_word": "лампа",
+					"english_sound": "en_lamp.mp3",
+					"bulgarian_sound": "bg_lamp.mp3",
+					"drawable": "lamp.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "shelf",
+					"bulgarian_word": "лавица",
+					"english_sound": "en_shelf.mp3",
+					"bulgarian_sound": "bg_shelf.mp3",
+					"drawable": "shelf.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "wardrobe",
+					"bulgarian_word": "гардероб",
+					"english_sound": "en_wardrobe.mp3",
+					"bulgarian_sound": "bg_wardrobe.mp3",
+					"drawable": "wardrobe.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "desk",
+					"bulgarian_word": "бюро",
+					"english_sound": "en_desk.mp3",
+					"bulgarian_sound": "bg_desk.mp3",
+					"drawable": "desk.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "door",
+					"bulgarian_word": "врата",
+					"english_sound": "en_door.mp3",
+					"bulgarian_sound": "bg_door.mp3",
+					"drawable": "door.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				}
+			]
+	},
+	{
+		"is_available": false,
+		"is_started": false,
+		"closed_drawable": "closed_cat_6.png",
+		"opened_drawable": "opened_cat_6.png",
+		"unavailable_drawable": "unavailable_cat_6.png",
+		"words":
+			[
+				{
+					"english_word": "sandwich",
+					"bulgarian_word": "сандвич",
+					"english_sound": "en_sandwich.mp3",
+					"bulgarian_sound": "bg_sandwich.mp3",
+					"drawable": "sandwich.png",
+					"bulgarian" : {
+							"is_available": true,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": true,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "salad",
+					"bulgarian_word": "салата",
+					"english_sound": "en_salad.mp3",
+					"bulgarian_sound": "bg_salad.mp3",
+					"drawable": "salad.png",
+					"bulgarian" : {
+							"is_available": true,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": true,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "chicken",
+					"bulgarian_word": "пиле",
+					"english_sound": "en_chicken.mp3",
+					"bulgarian_sound": "bg_chicken.mp3",
+					"drawable": "chicken.png",
+					"bulgarian" : {
+							"is_available": true,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": true,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "cake",
+					"bulgarian_word": "торта",
+					"english_sound": "en_cake.mp3",
+					"bulgarian_sound": "bg_cake.mp3",
+					"drawable": "cake.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "ice cream",
+					"bulgarian_word": "сладолед",
+					"english_sound": "en_ice_cream.mp3",
+					"bulgarian_sound": "bg_ice_cream.mp3",
+					"drawable": "ice_cream.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "chocolate",
+					"bulgarian_word": "шоколад",
+					"english_sound": "en_chocolate.mp3",
+					"bulgarian_sound": "bg_chocolate.mp3",
+					"drawable": "chocolate.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "water",
+					"bulgarian_word": "вода",
+					"english_sound": "en_water.mp3",
+					"bulgarian_sound": "bg_water.mp3",
+					"drawable": "water.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "juice",
+					"bulgarian_word": "сок",
+					"english_sound": "en_juice.mp3",
+					"bulgarian_sound": "bg_juice.mp3",
+					"drawable": "juice.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "milk",
+					"bulgarian_word": "мляко",
+					"english_sound": "en_milk.mp3",
+					"bulgarian_sound": "bg_milk.mp3",
+					"drawable": "milk.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				}
+			]
+	},
+	{
+		"is_available": false,
+		"is_started": false,
+		"closed_drawable": "closed_cat_7.png",
+		"opened_drawable": "opened_cat_7.png",
+		"unavailable_drawable": "unavailable_cat_7.png",
+		"words":
+			[
+				{
+					"english_word": "hand",
+					"bulgarian_word": "ръка",
+					"english_sound": "en_hand.mp3",
+					"bulgarian_sound": "bg_hand.mp3",
+					"drawable": "hand.png",
+					"bulgarian" : {
+							"is_available": true,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": true,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "arm",
+					"bulgarian_word": "ръка",
+					"english_sound": "en_arm.mp3",
+					"bulgarian_sound": "bg_arm.mp3",
+					"drawable": "arm.png",
+					"bulgarian" : {
+							"is_available": true,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": true,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "leg",
+					"bulgarian_word": "крак",
+					"english_sound": "en_leg.mp3",
+					"bulgarian_sound": "bg_leg.mp3",
+					"drawable": "leg.png",
+					"bulgarian" : {
+							"is_available": true,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": true,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "foot",
+					"bulgarian_word": "ходило",
+					"english_sound": "en_foot.mp3",
+					"bulgarian_sound": "bg_foot.mp3",
+					"drawable": "foot.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "head",
+					"bulgarian_word": "глава",
+					"english_sound": "en_head.mp3",
+					"bulgarian_sound": "bg_head.mp3",
+					"drawable": "head.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "eye",
+					"bulgarian_word": "око",
+					"english_sound": "en_eye.mp3",
+					"bulgarian_sound": "bg_eye.mp3",
+					"drawable": "eye.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "nose",
+					"bulgarian_word": "нос",
+					"english_sound": "en_nose.mp3",
+					"bulgarian_sound": "bg_nose.mp3",
+					"drawable": "nose.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "mouth",
+					"bulgarian_word": "уста",
+					"english_sound": "en_mouth.mp3",
+					"bulgarian_sound": "bg_mouth.mp3",
+					"drawable": "mouth.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "hair",
+					"bulgarian_word": "коса",
+					"english_sound": "en_hair.mp3",
+					"bulgarian_sound": "bg_hair.mp3",
+					"drawable": "hair.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				}
+			]
+	},
+	{
+		"is_available": false,
+		"is_started": false,
+		"closed_drawable": "closed_cat_8.png",
+		"opened_drawable": "opened_cat_8.png",
+		"unavailable_drawable": "unavailable_cat_8.png",
+		"words":
+			[
+				{
+					"english_word": "tall",
+					"bulgarian_word": "висок",
+					"english_sound": "en_tall.mp3",
+					"bulgarian_sound": "bg_tall.mp3",
+					"drawable": "tall.png",
+					"bulgarian" : {
+							"is_available": true,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": true,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "short",
+					"bulgarian_word": "нисък",
+					"english_sound": "en_short.mp3",
+					"bulgarian_sound": "bg_short.mp3",
+					"drawable": "short.png",
+					"bulgarian" : {
+							"is_available": true,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": true,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "weak",
+					"bulgarian_word": "слаб",
+					"english_sound": "en_weak.mp3",
+					"bulgarian_sound": "bg_weak.mp3",
+					"drawable": "weak.png",
+					"bulgarian" : {
+							"is_available": true,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": true,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "strong",
+					"bulgarian_word": "силен",
+					"english_sound": "en_strong.mp3",
+					"bulgarian_sound": "bg_strong.mp3",
+					"drawable": "strong.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "surprised",
+					"bulgarian_word": "изненадан",
+					"english_sound": "en_surprised.mp3",
+					"bulgarian_sound": "bg_surprised.mp3",
+					"drawable": "surprised.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "angry",
+					"bulgarian_word": "ядосан",
+					"english_sound": "en_angry.mp3",
+					"bulgarian_sound": "bg_angry.mp3",
+					"drawable": "angry.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "scared",
+					"bulgarian_word": "изплашен",
+					"english_sound": "en_scared.mp3",
+					"bulgarian_sound": "bg_scared.mp3",
+					"drawable": "scared.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "excited",
+					"bulgarian_word": "развълнуван",
+					"english_sound": "en_excited.mp3",
+					"bulgarian_sound": "bg_excited.mp3",
+					"drawable": "excited.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "happy",
+					"bulgarian_word": "щастлив",
+					"english_sound": "en_happy.mp3",
+					"bulgarian_sound": "bg_happy.mp3",
+					"drawable": "happy.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				}
+			]
+	},
+	{
+		"is_available": false,
+		"is_started": false,
+		"closed_drawable": "closed_cat_9.png",
+		"opened_drawable": "opened_cat_9.png",
+		"unavailable_drawable": "unavailable_cat_9.png",
+		"words":
+			[
+				{
+					"english_word": "sun",
+					"bulgarian_word": "слънце",
+					"english_sound": "en_sun.mp3",
+					"bulgarian_sound": "bg_sun.mp3",
+					"drawable": "sun.png",
+					"bulgarian" : {
+							"is_available": true,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": true,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "cloud",
+					"bulgarian_word": "облак",
+					"english_sound": "en_cloud.mp3",
+					"bulgarian_sound": "bg_cloud.mp3",
+					"drawable": "cloud.png",
+					"bulgarian" : {
+							"is_available": true,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": true,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "park",
+					"bulgarian_word": "парк",
+					"english_sound": "en_park.mp3",
+					"bulgarian_sound": "bg_park.mp3",
+					"drawable": "park.png",
+					"bulgarian" : {
+							"is_available": true,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": true,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "grass",
+					"bulgarian_word": "трева",
+					"english_sound": "en_grass.mp3",
+					"bulgarian_sound": "bg_grass.mp3",
+					"drawable": "grass.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "tree",
+					"bulgarian_word": "дърво",
+					"english_sound": "en_tree.mp3",
+					"bulgarian_sound": "bg_tree.mp3",
+					"drawable": "tree.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "bench",
+					"bulgarian_word": "пейка",
+					"english_sound": "en_bench.mp3",
+					"bulgarian_sound": "bg_bench.mp3",
+					"drawable": "bench.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "skateboard",
+					"bulgarian_word": "скейтборд",
+					"english_sound": "en_skateboard.mp3",
+					"bulgarian_sound": "bg_skateboard.mp3",
+					"drawable": "skateboard.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "ball",
+					"bulgarian_word": "топка",
+					"english_sound": "en_ball.mp3",
+					"bulgarian_sound": "bg_ball.mp3",
+					"drawable": "ball.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "kite",
+					"bulgarian_word": "хвърчило",
+					"english_sound": "en_kite.mp3",
+					"bulgarian_sound": "bg_kite.mp3",
+					"drawable": "kite.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				}
+			]
+	},
+	{
+		"is_available": false,
+		"is_started": false,
+		"closed_drawable": "closed_cat_10.png",
+		"opened_drawable": "opened_cat_10.png",
+		"unavailable_drawable": "unavailable_cat_10.png",
+		"words":
+			[
+				{
+					"english_word": "house",
+					"bulgarian_word": "къща",
+					"english_sound": "en_house.mp3",
+					"bulgarian_sound": "bg_house.mp3",
+					"drawable": "house.png",
+					"bulgarian" : {
+							"is_available": true,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": true,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "roof",
+					"bulgarian_word": "покрив",
+					"english_sound": "en_roof.mp3",
+					"bulgarian_sound": "bg_roof.mp3",
+					"drawable": "roof.png",
+					"bulgarian" : {
+							"is_available": true,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": true,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "wall",
+					"bulgarian_word": "стена",
+					"english_sound": "en_wall.mp3",
+					"bulgarian_sound": "bg_wall.mp3",
+					"drawable": "wall.png",
+					"bulgarian" : {
+							"is_available": true,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": true,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "window",
+					"bulgarian_word": "прозорец",
+					"english_sound": "en_window.mp3",
+					"bulgarian_sound": "bg_window.mp3",
+					"drawable": "window.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "chimney",
+					"bulgarian_word": "комин",
+					"english_sound": "en_chimney.mp3",
+					"bulgarian_sound": "bg_chimney.mp3",
+					"drawable": "chimney.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "room",
+					"bulgarian_word": "стая",
+					"english_sound": "en_room.mp3",
+					"bulgarian_sound": "bg_room.mp3",
+					"drawable": "room.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "stairs",
+					"bulgarian_word": "стълбище",
+					"english_sound": "en_stairs.mp3",
+					"bulgarian_sound": "bg_stairs.mp3",
+					"drawable": "stairs.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "doorbell",
+					"bulgarian_word": "звънец",
+					"english_sound": "en_doorbell.mp3",
+					"bulgarian_sound": "bg_doorbell.mp3",
+					"drawable": "doorbell.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "garden",
+					"bulgarian_word": "градина",
+					"english_sound": "en_garden.mp3",
+					"bulgarian_sound": "bg_garden.mp3",
+					"drawable": "garden.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				}
+			]
+	},
+	{
+		"is_available": false,
+		"is_started": false,
+		"closed_drawable": "closed_cat_11.png",
+		"opened_drawable": "opened_cat_11.png",
+		"unavailable_drawable": "unavailable_cat_11.png",
+		"words":
+			[
+				{
+					"english_word": "sea",
+					"bulgarian_word": "море",
+					"english_sound": "en_sea.mp3",
+					"bulgarian_sound": "bg_sea.mp3",
+					"drawable": "sea.png",
+					"bulgarian" : {
+							"is_available": true,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": true,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "beach",
+					"bulgarian_word": "плаж",
+					"english_sound": "en_beach.mp3",
+					"bulgarian_sound": "bg_beach.mp3",
+					"drawable": "beach.png",
+					"bulgarian" : {
+							"is_available": true,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": true,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "umbrella",
+					"bulgarian_word": "чадър",
+					"english_sound": "en_umbrella.mp3",
+					"bulgarian_sound": "bg_umbrella.mp3",
+					"drawable": "umbrella.png",
+					"bulgarian" : {
+							"is_available": true,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": true,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "sand",
+					"bulgarian_word": "пясък",
+					"english_sound": "en_sand.mp3",
+					"bulgarian_sound": "bg_sand.mp3",
+					"drawable": "sand.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "spade",
+					"bulgarian_word": "лопатка",
+					"english_sound": "en_spade.mp3",
+					"bulgarian_sound": "bg_spade.mp3",
+					"drawable": "spade.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "bucket",
+					"bulgarian_word": "кофичка",
+					"english_sound": "en_bucket.mp3",
+					"bulgarian_sound": "bg_bucket.mp3",
+					"drawable": "bucket.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "sandcastle",
+					"bulgarian_word": "пясъчен замък",
+					"english_sound": "en_sandcastle.mp3",
+					"bulgarian_sound": "bg_sandcastle.mp3",
+					"drawable": "sandcastle.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "boat",
+					"bulgarian_word": "лодка",
+					"english_sound": "en_boat.mp3",
+					"bulgarian_sound": "bg_boat.mp3",
+					"drawable": "boat.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "shell",
+					"bulgarian_word": "мида",
+					"english_sound": "en_shell.mp3",
+					"bulgarian_sound": "bg_shell.mp3",
+					"drawable": "shell.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				}
+			]
+	},
+	{
+		"is_available": false,
+		"is_started": false,
+		"closed_drawable": "closed_cat_12.png",
+		"opened_drawable": "opened_cat_12.png",
+		"unavailable_drawable": "unavailable_cat_12.png",
+		"words":
+			[
+				{
+					"english_word": "bathroom",
+					"bulgarian_word": "баня",
+					"english_sound": "en_bathroom.mp3",
+					"bulgarian_sound": "bg_bathroom.mp3",
+					"drawable": "bathroom.png",
+					"bulgarian" : {
+							"is_available": true,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": true,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "toilet",
+					"bulgarian_word": "тоалетна",
+					"english_sound": "en_toilet.mp3",
+					"bulgarian_sound": "toiletbg_.mp3",
+					"drawable": "toilet.png",
+					"bulgarian" : {
+							"is_available": true,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": true,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "shower",
+					"bulgarian_word": "душ",
+					"english_sound": "en_shower.mp3",
+					"bulgarian_sound": "showerbg_.mp3",
+					"drawable": "shower.png",
+					"bulgarian" : {
+							"is_available": true,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": true,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "bath",
+					"bulgarian_word": "вана",
+					"english_sound": "en_bath.mp3",
+					"bulgarian_sound": "bathbg_.mp3",
+					"drawable": "bath.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "sink",
+					"bulgarian_word": "мивка",
+					"english_sound": "en_sink.mp3",
+					"bulgarian_sound": "sinkbg_.mp3",
+					"drawable": "sink.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "towel",
+					"bulgarian_word": "хавлиена кърпа",
+					"english_sound": "en_towel.mp3",
+					"bulgarian_sound": "towelbg_.mp3",
+					"drawable": "towel.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "soap",
+					"bulgarian_word": "сапун",
+					"english_sound": "en_soap.mp3",
+					"bulgarian_sound": "soapbg_.mp3",
+					"drawable": "soap.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "toothbrush",
+					"bulgarian_word": "четка за зъби",
+					"english_sound": "en_toothbrush.mp3",
+					"bulgarian_sound": "bg_toothbrush.mp3",
+					"drawable": "toothbrush.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "mirror",
+					"bulgarian_word": "огледало",
+					"english_sound": "en_mirror.mp3",
+					"bulgarian_sound": "mirrorbg_.mp3",
+					"drawable": "mirror.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				}
+			]
+	},
+	{
+		"is_available": false,
+		"is_started": false,
+		"closed_drawable": "closed_cat_13.png",
+		"opened_drawable": "opened_cat_13.png",
+		"unavailable_drawable": "unavailable_cat_13.png",
+		"words":
+			[
+				{
+					"english_word": "spoon",
+					"bulgarian_word": "лъжица",
+					"english_sound": "en_spoon.mp3",
+					"bulgarian_sound": "bg_spoon.mp3",
+					"drawable": "spoon.png",
+					"bulgarian" : {
+							"is_available": true,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": true,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "fork",
+					"bulgarian_word": "вилица",
+					"english_sound": "en_fork.mp3",
+					"bulgarian_sound": "bg_fork.mp3",
+					"drawable": "fork.png",
+					"bulgarian" : {
+							"is_available": true,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": true,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "bottle",
+					"bulgarian_word": "бутилка",
+					"english_sound": "en_bottle.mp3",
+					"bulgarian_sound": "bg_bottle.mp3",
+					"drawable": "bottle.png",
+					"bulgarian" : {
+							"is_available": true,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": true,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "plate",
+					"bulgarian_word": "чиния",
+					"english_sound": "en_plate.mp3",
+					"bulgarian_sound": "bg_plate.mp3",
+					"drawable": "plate.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "cup",
+					"bulgarian_word": "чаша",
+					"english_sound": "en_cup.mp3",
+					"bulgarian_sound": "bg_cup.mp3",
+					"drawable": "cup.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "hot",
+					"bulgarian_word": "гореща",
+					"english_sound": "en_hot.mp3",
+					"bulgarian_sound": "bg_hot.mp3",
+					"drawable": "hot.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "cold",
+					"bulgarian_word": "студена",
+					"english_sound": "en_cold.mp3",
+					"bulgarian_sound": "bg_cold.mp3",
+					"drawable": "cold.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "big",
+					"bulgarian_word": "голяма",
+					"english_sound": "en_big.mp3",
+					"bulgarian_sound": "bg_big.mp3",
+					"drawable": "big.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				},
+				{
+					"english_word": "small",
+					"bulgarian_word": "малка",
+					"english_sound": "en_small.mp3",
+					"bulgarian_sound": "bg_small.mp3",
+					"drawable": "small.png",
+					"bulgarian" : {
+							"is_available": false,
+							"is_answered": false 
+						},
+					"english" : {
+							"is_available": false,
+							"is_answered": false 
+						}
+				}
+			]
+	}
+]
