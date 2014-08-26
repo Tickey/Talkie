@@ -1,10 +1,12 @@
 <?php
-	
+	header('Content-Type: application/json; charset=utf-8');
+
 	define("BASE_URL", "http://talkie-kids.co/app/resources/");
+	//define("RESOURCES_PATH", "resources/");
 	define("JSON_WORDS_NOSPECIFIC", "words.json");
 	define("JSON_LANGUAGES", "languages.json");
 	define("JSON_CATEGORIES", "categories.json");
-	define("JSON_REF_WORDS_LANG", "bg_ref_words_languages.json");
+	define("JSON_REF_WORDS_LANG", "ref_words_languages.json");
 
 	define("LDPI", "ldpi");
 	define("MDPI", "mdpi");
@@ -33,6 +35,14 @@
 	$deviceHeight = $_POST["height"];
 	$deviceId = $_POST["device_id"];
 
+	if( empty( $deviceScreenSize ) ) {
+		$deviceScreenSize = $_GET["screen_size"];
+	}
+
+	if( empty( $deviceDensity ) ) {
+		$deviceDensity = $_GET["density"];
+	}
+
 	$isResolutionUnknown = false;
 	$screenSize = null;
 	$density = null;
@@ -41,8 +51,8 @@
 		$screenSize = LARGE;
 	} elseif ( strcasecmp($deviceScreenSize, XLARGE) == 0 ) {
 		$screenSize = XLARGE;
-	} elseif ( strcasecmp($deviceScreenSize, XLARGE) == 0 ) {
-		$screenSize = XLARGE;
+	} elseif ( strcasecmp($deviceScreenSize, NORMAL) == 0 ) {
+		$screenSize = NORMAL;
 	} else {
 		$isResolutionUnknown = true;
 	}
@@ -77,11 +87,11 @@
 				$deviceSpecificPath = NORMAL_LDPI;
 			} elseif ( strcasecmp($deviceDensity, MDPI) == 0 ) {
 				$deviceSpecificPath = NORMAL_MDPI;
-			} elseif ( strcasecmp($deviceDensity, MDPI) == 0 ) {
+			} elseif ( strcasecmp($deviceDensity, HDPI) == 0 ) {
 				$deviceSpecificPath = NORMAL_HDPI;
-			} elseif ( strcasecmp($deviceDensity, MDPI) == 0 ) {
+			} elseif ( strcasecmp($deviceDensity, XHDPI) == 0 ) {
 				$deviceSpecificPath = NORMAL_XHDPI;
-			} elseif ( strcasecmp($deviceDensity, MDPI) == 0 ) {
+			} elseif ( strcasecmp($deviceDensity, XXHDPI) == 0 ) {
 				$deviceSpecificPath = NORMAL_XXHDPI;
 			} else {
 				$isResolutionUnknown = true;
@@ -110,12 +120,25 @@
 		$deviceSpecificPath = NORMAL_MDPI;
 	}
 
-	$deviceSpecificPath = BASE_URL.$deviceSpecificPath;
+	$response["url_resources"] = BASE_URL.$deviceSpecificPath;
+	$response["words"] = json_decode(file_get_contents(BASE_URL.JSON_WORDS_NOSPECIFIC));
+	$response["categories"] = json_decode(file_get_contents(BASE_URL.JSON_CATEGORIES));
+	$response["languages"] = json_decode(file_get_contents(BASE_URL.JSON_LANGUAGES));
+	$response["ref_words_languages"] = json_decode(file_get_contents(BASE_URL.JSON_REF_WORDS_LANG));
 
-	$response["url_resources"] = $deviceSpecificPath;
-	$response["words"] = file_get_contents(BASE_URL.JSON_WORDS_NOSPECIFIC);
-	$response["categories"] = file_get_contents(BASE_URL.JSON_CATEGORIES);
-	$response["languages"] = file_get_contents(BASE_URL.JSON_LANGUAGES);
-	$response["ref_words_languages"] = file_get_contents(BASE_URL.JSON_REF_WORDS_LANG);
-
-	echo $response;
+	echo json_encode($response);
+	
+	/* FOR TEST CASES
+	echo "deviceSpecificPath: ";
+	echo $deviceSpecificPath;
+	echo "<br />isResolutionUnknown: ";
+	echo $isResolutionUnknown;
+	echo "<br />density: ";
+	echo $density;
+	echo "<br />screenSize: ";
+	echo $screenSize;
+	echo "<br />deviceDensity: ";
+	echo $deviceDensity;
+	echo "<br />deviceScreenSize: ";
+	echo $deviceScreenSize;
+	*/
