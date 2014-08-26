@@ -1,704 +1,1406 @@
 [
 	{
 		"word_id" : 1,
-		"drawable" : "elephant",
+		"word" : "elephant",
 		"raw" : "en_elephant.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 2,
-		"drawable" : "lion",
+		"word" : "lion",
 		"raw" : "en_lion.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 3,
-		"drawable" : "penguin",
+		"word" : "penguin",
 		"raw" : "en_penguin.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 4,
-		"drawable" : "bear",
+		"word" : "bear",
 		"raw" : "en_bear.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 5,
-		"drawable" : "giraffe",
+		"word" : "giraffe",
 		"raw" : "en_giraffe.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 6,
-		"drawable" : "hippo",
+		"word" : "hippo",
 		"raw" : "en_hippo.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 7,
-		"drawable" : "monkey",
+		"word" : "monkey",
 		"raw" : "en_monkey.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 8,
-		"drawable" : "turtle",
+		"word" : "turtle",
 		"raw" : "en_turtle.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 9,
-		"drawable" : "zebra",
+		"word" : "zebra",
 		"raw" : "en_zebra.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 10,
-		"drawable" : "apple",
+		"word" : "apple",
 		"raw" : "en_apple.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 11,
-		"drawable" : "banana",
+		"word" : "banana",
 		"raw" : "en_banana.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 12,
-		"drawable" : "orange",
+		"word" : "orange",
 		"raw" : "en_orange.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 13,
-		"drawable" : "strawberry",
+		"word" : "strawberry",
 		"raw" : "en_strawberry.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 14,
-		"drawable" : "tomato",
+		"word" : "tomato",
 		"raw" : "en_tomato.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 15,
-		"drawable" : "potato",
+		"word" : "potato",
 		"raw" : "en_potato.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 16,
-		"drawable" : "pepper",
+		"word" : "pepper",
 		"raw" : "en_pepper.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 17,
-		"drawable" : "kiwi",
+		"word" : "kiwi",
 		"raw" : "en_kiwi.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 18,
-		"drawable" : "broccoli",
+		"word" : "broccoli",
 		"raw" : "en_broccoli.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 19,
-		"drawable" : "girl",
+		"word" : "girl",
 		"raw" : "en_girl.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 20,
-		"drawable" : "boy",
+		"word" : "boy",
 		"raw" : "en_boy.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 21,
-		"drawable" : "baby",
+		"word" : "baby",
 		"raw" : "en_baby.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 22,
-		"drawable" : "woman",
+		"word" : "woman",
 		"raw" : "en_woman.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 23,
-		"drawable" : "man",
+		"word" : "man",
 		"raw" : "en_man.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 24,
-		"drawable" : "dog",
+		"word" : "dog",
 		"raw" : "en_dog.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 25,
-		"drawable" : "cat",
+		"word" : "cat",
 		"raw" : "en_cat.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 26,
-		"drawable" : "parrot",
+		"word" : "parrot",
 		"raw" : "en_parrot.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 27,
-		"drawable" : "rabbit",
+		"word" : "rabbit",
 		"raw" : "en_rabbit.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 28,
-		"drawable" : "white",
+		"word" : "white",
 		"raw" : "en_white.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 29,
-		"drawable" : "yellow",
+		"word" : "yellow",
 		"raw" : "en_yellow.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 30,
-		"drawable" : "orange",
+		"word" : "orange",
 		"raw" : "en_orange.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 31,
-		"drawable" : "red",
+		"word" : "red",
 		"raw" : "en_red.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 32,
-		"drawable" : "pink",
+		"word" : "pink",
 		"raw" : "en_pink.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 33,
-		"drawable" : "purple",
+		"word" : "purple",
 		"raw" : "en_purple.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 34,
-		"drawable" : "blue",
+		"word" : "blue",
 		"raw" : "en_blue.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 35,
-		"drawable" : "green",
+		"word" : "green",
 		"raw" : "en_green.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 36,
-		"drawable" : "black",
+		"word" : "black",
 		"raw" : "en_black.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 37,
-		"drawable" : "chair",
+		"word" : "chair",
 		"raw" : "en_chair.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 38,
-		"drawable" : "table",
+		"word" : "table",
 		"raw" : "en_table.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 39,
-		"drawable" : "sofa",
+		"word" : "sofa",
 		"raw" : "en_sofa.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 40,
-		"drawable" : "armchair",
+		"word" : "armchair",
 		"raw" : "en_armchair.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 41,
-		"drawable" : "lamp",
+		"word" : "lamp",
 		"raw" : "en_lamp.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 42,
-		"drawable" : "shelf",
+		"word" : "shelf",
 		"raw" : "en_shelf.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 43,
-		"drawable" : "wardrobe",
+		"word" : "wardrobe",
 		"raw" : "en_wardrobe.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 44,
-		"drawable" : "desk",
+		"word" : "desk",
 		"raw" : "en_desk.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 45,
-		"drawable" : "door",
+		"word" : "door",
 		"raw" : "en_door.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 46,
-		"drawable" : "sandwich",
+		"word" : "sandwich",
 		"raw" : "en_sandwich.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 47,
-		"drawable" : "salad",
+		"word" : "salad",
 		"raw" : "en_salad.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 48,
-		"drawable" : "chicken",
+		"word" : "chicken",
 		"raw" : "en_chicken.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 49,
-		"drawable" : "cake",
+		"word" : "cake",
 		"raw" : "en_cake.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 50,
-		"drawable" : "ice cream",
+		"word" : "ice cream",
 		"raw" : "en_ice_cream.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 51,
-		"drawable" : "chocolate",
+		"word" : "chocolate",
 		"raw" : "en_chocolate.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 52,
-		"drawable" : "water",
+		"word" : "water",
 		"raw" : "en_water.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 53,
-		"drawable" : "juice",
+		"word" : "juice",
 		"raw" : "en_juice.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 54,
-		"drawable" : "milk",
+		"word" : "milk",
 		"raw" : "en_milk.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 55,
-		"drawable" : "hand",
+		"word" : "hand",
 		"raw" : "en_hand.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 56,
-		"drawable" : "arm",
+		"word" : "arm",
 		"raw" : "en_arm.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 57,
-		"drawable" : "leg",
+		"word" : "leg",
 		"raw" : "en_leg.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 58,
-		"drawable" : "foot",
+		"word" : "foot",
 		"raw" : "en_foot.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 59,
-		"drawable" : "head",
+		"word" : "head",
 		"raw" : "en_head.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 60,
-		"drawable" : "eye",
+		"word" : "eye",
 		"raw" : "en_eye.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 61,
-		"drawable" : "nose",
+		"word" : "nose",
 		"raw" : "en_nose.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 62,
-		"drawable" : "mouth",
+		"word" : "mouth",
 		"raw" : "en_mouth.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 63,
-		"drawable" : "hair",
+		"word" : "hair",
 		"raw" : "en_hair.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 64,
-		"drawable" : "tall",
+		"word" : "tall",
 		"raw" : "en_tall.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 65,
-		"drawable" : "short",
+		"word" : "short",
 		"raw" : "en_short.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 66,
-		"drawable" : "weak",
+		"word" : "weak",
 		"raw" : "en_weak.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 67,
-		"drawable" : "strong",
+		"word" : "strong",
 		"raw" : "en_strong.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 68,
-		"drawable" : "surprised",
+		"word" : "surprised",
 		"raw" : "en_surprised.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 69,
-		"drawable" : "angry",
+		"word" : "angry",
 		"raw" : "en_angry.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 70,
-		"drawable" : "scared",
+		"word" : "scared",
 		"raw" : "en_scared.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 71,
-		"drawable" : "excited",
+		"word" : "excited",
 		"raw" : "en_excited.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 72,
-		"drawable" : "happy",
+		"word" : "happy",
 		"raw" : "en_happy.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 73,
-		"drawable" : "sun",
+		"word" : "sun",
 		"raw" : "en_sun.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 74,
-		"drawable" : "cloud",
+		"word" : "cloud",
 		"raw" : "en_cloud.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 75,
-		"drawable" : "park",
+		"word" : "park",
 		"raw" : "en_park.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 76,
-		"drawable" : "grass",
+		"word" : "grass",
 		"raw" : "en_grass.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 77,
-		"drawable" : "tree",
+		"word" : "tree",
 		"raw" : "en_tree.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 78,
-		"drawable" : "bench",
+		"word" : "bench",
 		"raw" : "en_bench.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 79,
-		"drawable" : "skateboard",
+		"word" : "skateboard",
 		"raw" : "en_skateboard.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 80,
-		"drawable" : "ball",
+		"word" : "ball",
 		"raw" : "en_ball.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 81,
-		"drawable" : "kite",
+		"word" : "kite",
 		"raw" : "en_kite.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 82,
-		"drawable" : "house",
+		"word" : "house",
 		"raw" : "en_house.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 83,
-		"drawable" : "roof",
+		"word" : "roof",
 		"raw" : "en_roof.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 84,
-		"drawable" : "wall",
+		"word" : "wall",
 		"raw" : "en_wall.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 85,
-		"drawable" : "window",
+		"word" : "window",
 		"raw" : "en_window.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 86,
-		"drawable" : "chimney",
+		"word" : "chimney",
 		"raw" : "en_chimney.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 87,
-		"drawable" : "room",
+		"word" : "room",
 		"raw" : "en_room.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 88,
-		"drawable" : "stairs",
+		"word" : "stairs",
 		"raw" : "en_stairs.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 89,
-		"drawable" : "doorbell",
+		"word" : "doorbell",
 		"raw" : "en_doorbell.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 90,
-		"drawable" : "garden",
+		"word" : "garden",
 		"raw" : "en_garden.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 91,
-		"drawable" : "sea",
+		"word" : "sea",
 		"raw" : "en_sea.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 92,
-		"drawable" : "beach",
+		"word" : "beach",
 		"raw" : "en_beach.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 93,
-		"drawable" : "umbrella",
+		"word" : "umbrella",
 		"raw" : "en_umbrella.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 94,
-		"drawable" : "sand",
+		"word" : "sand",
 		"raw" : "en_sand.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 95,
-		"drawable" : "spade",
+		"word" : "spade",
 		"raw" : "en_spade.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 96,
-		"drawable" : "bucket",
+		"word" : "bucket",
 		"raw" : "en_bucket.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 97,
-		"drawable" : "sandcastle",
+		"word" : "sandcastle",
 		"raw" : "en_sandcastle.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 98,
-		"drawable" : "boat",
+		"word" : "boat",
 		"raw" : "en_boat.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 99,
-		"drawable" : "shell",
+		"word" : "shell",
 		"raw" : "en_shell.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 100,
-		"drawable" : "bathroom",
+		"word" : "bathroom",
 		"raw" : "en_bathroom.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 101,
-		"drawable" : "toilet",
+		"word" : "toilet",
 		"raw" : "en_toilet.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 102,
-		"drawable" : "shower",
+		"word" : "shower",
 		"raw" : "en_shower.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 103,
-		"drawable" : "bath",
+		"word" : "bath",
 		"raw" : "en_bath.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 104,
-		"drawable" : "sink",
+		"word" : "sink",
 		"raw" : "en_sink.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 105,
-		"drawable" : "towel",
+		"word" : "towel",
 		"raw" : "en_towel.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 106,
-		"drawable" : "soap",
+		"word" : "soap",
 		"raw" : "en_soap.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 107,
-		"drawable" : "toothbrush",
+		"word" : "toothbrush",
 		"raw" : "en_toothbrush.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 108,
-		"drawable" : "mirror",
+		"word" : "mirror",
 		"raw" : "en_mirror.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 109,
-		"drawable" : "spoon",
+		"word" : "spoon",
 		"raw" : "en_spoon.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 110,
-		"drawable" : "fork",
+		"word" : "fork",
 		"raw" : "en_fork.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 111,
-		"drawable" : "bottle",
+		"word" : "bottle",
 		"raw" : "en_bottle.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 112,
-		"drawable" : "plate",
+		"word" : "plate",
 		"raw" : "en_plate.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 113,
-		"drawable" : "cup",
+		"word" : "cup",
 		"raw" : "en_cup.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 114,
-		"drawable" : "hot",
+		"word" : "hot",
 		"raw" : "en_hot.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 115,
-		"drawable" : "cold",
+		"word" : "cold",
 		"raw" : "en_cold.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 116,
-		"drawable" : "big",
+		"word" : "big",
 		"raw" : "en_big.mp3",
 		"language_id" : 1
 	},
 	{
 		"word_id" : 117,
-		"drawable" : "small",
+		"word" : "small",
 		"raw" : "en_small.mp3",
 		"language_id" : 1
+	},
+	{
+		"word_id" : 1,
+		"word" : "слон",
+		"raw" : "bg_elephant.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 2,
+		"word" : "лъв",
+		"raw" : "bg_lion.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 3,
+		"word" : "пингвин",
+		"raw" : "bg_penguin.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 4,
+		"word" : "мечка",
+		"raw" : "bg_bear.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 5,
+		"word" : "жираф",
+		"raw" : "bg_giraffe.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 6,
+		"word" : "хипопотам",
+		"raw" : "bg_hippo.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 7,
+		"word" : "маймуна",
+		"raw" : "bg_monkey.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 8,
+		"word" : "костенурка",
+		"raw" : "bg_turtle.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 9,
+		"word" : "зебра",
+		"raw" : "bg_zebra.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 10,
+		"word" : "ябълка",
+		"raw" : "bg_apple.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 11,
+		"word" : "банан",
+		"raw" : "bg_banana.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 12,
+		"word" : "портокал",
+		"raw" : "bg_orange.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 13,
+		"word" : "ягода",
+		"raw" : "bg_strawberry.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 14,
+		"word" : "домат",
+		"raw" : "bg_tomato.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 15,
+		"word" : "картоф",
+		"raw" : "bg_potato.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 16,
+		"word" : "чушка",
+		"raw" : "bg_pepper.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 17,
+		"word" : "киви",
+		"raw" : "bg_kiwi.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 18,
+		"word" : "броколи",
+		"raw" : "bg_broccoli.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 19,
+		"word" : "момиче",
+		"raw" : "bg_girl.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 20,
+		"word" : "момче",
+		"raw" : "bg_boy.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 21,
+		"word" : "бебе",
+		"raw" : "bg_baby.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 22,
+		"word" : "жена",
+		"raw" : "bg_woman.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 23,
+		"word" : "мъж",
+		"raw" : "bg_man.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 24,
+		"word" : "куче",
+		"raw" : "bg_dog.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 25,
+		"word" : "коте",
+		"raw" : "bg_cat.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 26,
+		"word" : "папагал",
+		"raw" : "bg_parrot.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 27,
+		"word" : "заек",
+		"raw" : "bg_rabbit.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 28,
+		"word" : "бял",
+		"raw" : "bg_white.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 29,
+		"word" : "жълт",
+		"raw" : "bg_yellow.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 30,
+		"word" : "оранжев",
+		"raw" : "bg_orange.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 31,
+		"word" : "червен",
+		"raw" : "bg_red.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 32,
+		"word" : "розов",
+		"raw" : "bg_pink.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 33,
+		"word" : "лилав",
+		"raw" : "bg_purple.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 34,
+		"word" : "син",
+		"raw" : "bg_blue.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 35,
+		"word" : "зелен",
+		"raw" : "bg_green.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 36,
+		"word" : "черен",
+		"raw" : "bg_black.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 37,
+		"word" : "стол",
+		"raw" : "bg_chair.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 38,
+		"word" : "маса",
+		"raw" : "bg_table.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 39,
+		"word" : "диван",
+		"raw" : "bg_sofa.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 40,
+		"word" : "кресло",
+		"raw" : "bg_armchair.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 41,
+		"word" : "лампа",
+		"raw" : "bg_lamp.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 42,
+		"word" : "лавица",
+		"raw" : "bg_shelf.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 43,
+		"word" : "гардероб",
+		"raw" : "bg_wardrobe.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 44,
+		"word" : "бюро",
+		"raw" : "bg_desk.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 45,
+		"word" : "врата",
+		"raw" : "bg_door.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 46,
+		"word" : "сандвич",
+		"raw" : "bg_sandwich.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 47,
+		"word" : "салата",
+		"raw" : "bg_salad.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 48,
+		"word" : "пиле",
+		"raw" : "bg_chicken.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 49,
+		"word" : "торта",
+		"raw" : "bg_cake.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 50,
+		"word" : "сладолед",
+		"raw" : "bg_ice_cream.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 51,
+		"word" : "шоколад",
+		"raw" : "bg_chocolate.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 52,
+		"word" : "вода",
+		"raw" : "bg_water.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 53,
+		"word" : "сок",
+		"raw" : "bg_juice.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 54,
+		"word" : "мляко",
+		"raw" : "bg_milk.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 55,
+		"word" : "ръка",
+		"raw" : "bg_hand.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 56,
+		"word" : "ръка",
+		"raw" : "bg_arm.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 57,
+		"word" : "крак",
+		"raw" : "bg_leg.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 58,
+		"word" : "ходило",
+		"raw" : "bg_foot.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 59,
+		"word" : "глава",
+		"raw" : "bg_head.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 60,
+		"word" : "око",
+		"raw" : "bg_eye.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 61,
+		"word" : "нос",
+		"raw" : "bg_nose.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 62,
+		"word" : "уста",
+		"raw" : "bg_mouth.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 63,
+		"word" : "коса",
+		"raw" : "bg_hair.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 64,
+		"word" : "висок",
+		"raw" : "bg_tall.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 65,
+		"word" : "нисък",
+		"raw" : "bg_short.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 66,
+		"word" : "слаб",
+		"raw" : "bg_weak.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 67,
+		"word" : "силен",
+		"raw" : "bg_strong.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 68,
+		"word" : "изненадан",
+		"raw" : "bg_surprised.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 69,
+		"word" : "ядосан",
+		"raw" : "bg_angry.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 70,
+		"word" : "изплашен",
+		"raw" : "bg_scared.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 71,
+		"word" : "развълнуван",
+		"raw" : "bg_excited.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 72,
+		"word" : "щастлив",
+		"raw" : "bg_happy.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 73,
+		"word" : "слънце",
+		"raw" : "bg_sun.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 74,
+		"word" : "облак",
+		"raw" : "bg_cloud.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 75,
+		"word" : "парк",
+		"raw" : "bg_park.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 76,
+		"word" : "трева",
+		"raw" : "bg_grass.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 77,
+		"word" : "дърво",
+		"raw" : "bg_tree.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 78,
+		"word" : "пейка",
+		"raw" : "bg_bench.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 79,
+		"word" : "скейтборд",
+		"raw" : "bg_skateboard.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 80,
+		"word" : "топка",
+		"raw" : "bg_ball.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 81,
+		"word" : "хвърчило",
+		"raw" : "bg_kite.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 82,
+		"word" : "къща",
+		"raw" : "bg_house.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 83,
+		"word" : "покрив",
+		"raw" : "bg_roof.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 84,
+		"word" : "стена",
+		"raw" : "bg_wall.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 85,
+		"word" : "прозорец",
+		"raw" : "bg_window.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 86,
+		"word" : "комин",
+		"raw" : "bg_chimney.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 87,
+		"word" : "стая",
+		"raw" : "bg_room.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 88,
+		"word" : "стълбище",
+		"raw" : "bg_stairs.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 89,
+		"word" : "звънец",
+		"raw" : "bg_doorbell.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 90,
+		"word" : "градина",
+		"raw" : "bg_garden.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 91,
+		"word" : "море",
+		"raw" : "bg_sea.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 92,
+		"word" : "плаж",
+		"raw" : "bg_beach.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 93,
+		"word" : "чадър",
+		"raw" : "bg_umbrella.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 94,
+		"word" : "пясък",
+		"raw" : "bg_sand.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 95,
+		"word" : "лопатка",
+		"raw" : "bg_spade.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 96,
+		"word" : "кофичка",
+		"raw" : "bg_bucket.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 97,
+		"word" : "пясъчен замък",
+		"raw" : "bg_sandcastle.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 98,
+		"word" : "лодка",
+		"raw" : "bg_boat.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 99,
+		"word" : "мида",
+		"raw" : "bg_shell.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 100,
+		"word" : "баня",
+		"raw" : "bg_bathroom.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 101,
+		"word" : "тоалетна",
+		"raw" : "bg_toilet.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 102,
+		"word" : "душ",
+		"raw" : "bg_shower.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 103,
+		"word" : "вана",
+		"raw" : "bg_bath.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 104,
+		"word" : "мивка",
+		"raw" : "bg_sink.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 105,
+		"word" : "хавлия",
+		"raw" : "bg_towel.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 106,
+		"word" : "сапун",
+		"raw" : "bg_soap.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 107,
+		"word" : "четка за зъби",
+		"raw" : "bg_toothbrush.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 108,
+		"word" : "огледало",
+		"raw" : "bg_mirror.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 109,
+		"word" : "лъжица",
+		"raw" : "bg_spoon.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 110,
+		"word" : "вилица",
+		"raw" : "bg_fork.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 111,
+		"word" : "бутилка",
+		"raw" : "bg_bottle.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 112,
+		"word" : "чиния",
+		"raw" : "bg_plate.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 113,
+		"word" : "чаша",
+		"raw" : "bg_cup.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 114,
+		"word" : "гореща",
+		"raw" : "bg_hot.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 115,
+		"word" : "студена",
+		"raw" : "bg_cold.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 116,
+		"word" : "голяма",
+		"raw" : "bg_big.mp3",
+		"language_id" : 2
+	},
+	{
+		"word_id" : 117,
+		"word" : "малка",
+		"raw" : "bg_small.mp3",
+		"language_id" : 2
 	}
 ]
