@@ -25,7 +25,7 @@
 	define("LARGE_MDPI", "1024x600");
 	define("XLARGE_MDPI", "1280x800");
 	define("LARGE_TVDPI", "1280x800");
-	define("NORMAL_HDPI", "800x400");
+	define("NORMAL_HDPI", "800x480");
 	define("NORMAL_XHDPI", "1280x800");
 	define("NORMAL_XXHDPI", "1920x1080");
 
