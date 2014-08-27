@@ -52,7 +52,7 @@ chocolate - шоколад
 water - вода
 juice - сок
 milk - мляко
-hand - ръка
+hand - длан CHANGED
 arm - ръка
 leg - крак
 foot - ходило
@@ -111,7 +111,7 @@ fork - вилица
 bottle - бутилка
 plate - чиния
 cup - чаша
-hot - гореща
-cold - студена
-big - голяма
-small - малка
+hot - горещо CHANGED
+cold - студено CHANGED
+big - голямо CHANGED
+small - малко CHANGED
