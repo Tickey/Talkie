@@ -11,5 +11,22 @@
         android:layout_centerInParent="true"
         android:src="@drawable/splash_bg"
         android:scaleType="centerCrop" />
+    
+    <ProgressBar
+        android:id="@android:id/progress"
+        style="@style/DownloadingProggressBar"
+        android:layout_width="200dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="150dp"
+        android:layout_centerHorizontal="true" />
+    
+    <TextView
+        android:id="@android:id/text1"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_below="@android:id/progress"
+        android:layout_centerHorizontal="true"
+        android:text="@null" />
 
 </RelativeLayout>
