@@ -15,12 +15,14 @@ import android.graphics.Bitmap;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 import co.talkie_kids.talkie.R;
 import co.talkie_kids.talkie.DataModels.UpdateResponse;
 import co.talkie_kids.talkie.DataModels.Word;
@@ -49,8 +51,12 @@ public class SplashScreenActivity extends BaseTalkieActivity {
 
 	private ImageLoader mImageLoader;
 
-	protected int mDownloadedImages = 0;
+	private UpdateResponse  mUpdateResponse;
+
+	protected int mDownloadedImagesCount = 0;
 	protected int mFailedImagesCount = 0;
+	protected int mCanceledImagesCount = 0;
+	protected int mStartedLoadingImagesCount = 0;
 
 	@Override
 	public void onCreate(Bundle savedInstance) {
@@ -85,8 +91,8 @@ public class SplashScreenActivity extends BaseTalkieActivity {
 	        
 	        ArrayList<NameValuePair> params = new ArrayList<NameValuePair>();
 	        
-	        params.add( new BasicNameValuePair("screen_size", "normal") );
-	        params.add( new BasicNameValuePair("density", "ldpi") );
+	        params.add( new BasicNameValuePair("screen_size", screenSizeValue) );
+	        params.add( new BasicNameValuePair("density", densityDpiValue) );
 			params.add( new BasicNameValuePair("device_id", deviceId) );
 			
 			new ServerHandler(ServerHandler.POST, params,
@@ -139,8 +145,6 @@ public class SplashScreenActivity extends BaseTalkieActivity {
 					Log.v(TAG, "isSuccessful: " + Boolean.toString(isSuccessful));
 				}
 			};
-
-	private int mWordsStartedLoading = 0;
 	
 	@TargetApi(Build.VERSION_CODES.HONEYCOMB)
 	private void updateProgress(int progress) {
@@ -162,64 +166,68 @@ public class SplashScreenActivity extends BaseTalkieActivity {
         
 		Type responseType = new TypeToken<UpdateResponse>() {
 		        }.getType();
-		final UpdateResponse update = new Gson()
+		mUpdateResponse = new Gson()
 				.fromJson(jsonObject.toString(), responseType);
-		
-		mDownloadProgressbar.setMax(update.words.size());
+
+		mDownloadProgressbar.setMax(mUpdateResponse.words.size());
 		
 		Log.v(TAG, "MAX: " + mDownloadProgressbar.getMax());
 		
-		String resourcesBasePath = update.imageResourcesPathURL;
+		String resourcesBasePath = mUpdateResponse.imageResourcesPathURL;
 		
-		for( Word word : update.words) {
+		//for( Word word : mUpdateResponse.words) {
+		for(int i = 40 ; i < 118 ; i++) {
+			
+			Word word = mUpdateResponse.words.get(i);
+			
 			String imageUrl = resourcesBasePath + word.imageName;
-			mWordsStartedLoading++;
 			//Log.v(TAG, imageUrl);
 			
-			mImageLoader.loadImage( imageUrl,
-					new SimpleImageLoadingListener() {
-			    @Override
-			    public void onLoadingComplete(String imageUri,
-			    		View view, Bitmap loadedImage) {
-					
-			    	updateProgress(++mDownloadedImages);
-	    			
-	    			Log.v(TAG, "mFailedImagesCount: " + mFailedImagesCount);
-	    			Log.v(TAG, "mDownloadedImages: " + mDownloadedImages);
-	    			Log.v(TAG, "mDownloadedImages: " + update.words.size());
-	    			Log.v(TAG, "mWordsStartedLoading: " + mWordsStartedLoading);
-			    	
-			    	if(mDownloadedImages + mFailedImagesCount ==
-			    			update.words.size() ) {
-				    	if( mDownloadProgressbar.getMax() == mDownloadedImages ) {
-							continueToApp(getString(R.string.update_completed));
-				    	} else {
-							continueToApp(getString(R.string
-									.downloading_resources_faled));
-						}
-			    	}
-			    	
-			    }
-			    
-			    @Override
-	    		public void onLoadingFailed(String imageUri, View view,
-	    				FailReason failReason) {
-	    			super.onLoadingFailed(imageUri, view, failReason);
-	    			
-	    			mFailedImagesCount++;
-	    			
-	    			Log.v(TAG, "mFailedImagesCount: " + mFailedImagesCount);
-	    			Log.v(TAG, "mDownloadedImages: " + mDownloadedImages);
-	    			Log.v(TAG, "mDownloadedImages: " + update.words.size());
-	    			Log.v(TAG, "mWordsStartedLoading: " + mWordsStartedLoading);
-	    			
-			    	if(mDownloadedImages + mFailedImagesCount ==
-			    			update.words.size() ) {
-						continueToApp(getString(R.string
-								.downloading_resources_faled));
-			    	}
-	    		}
-			});
+			if( !TextUtils.isEmpty(imageUrl)) {
+				
+				mImageLoader.loadImage( imageUrl,
+						new SimpleImageLoadingListener() {
+				    
+				    @Override
+		    		public void onLoadingStarted(String imageUri, View view) {
+		    			super.onLoadingStarted(imageUri, view);
+		    			mStartedLoadingImagesCount++;
+		    		}
+				    
+				    @Override
+				    public void onLoadingComplete(String imageUri,
+				    		View view, Bitmap loadedImage) {
+				    	mDownloadedImagesCount++;
+				    	updateProgress(mDownloadedImagesCount);
+				    	
+		    			checkIfDownloadingCompleted();
+				    	
+				    }
+				    
+				    @Override
+		    		public void onLoadingFailed(String imageUri, View view,
+		    				FailReason failReason) {
+		    			super.onLoadingFailed(imageUri, view, failReason);
+		    			
+		    			mFailedImagesCount++;
+		    			
+		    			checkIfDownloadingCompleted();
+		    		}
+				    
+				    @Override
+		    		public void onLoadingCancelled(String imageUri,
+		    				View view) {
+		    			super.onLoadingCancelled(imageUri, view);
+		    			
+		    			mCanceledImagesCount++;
+		    			
+		    			checkIfDownloadingCompleted();
+		    		}
+				});
+			} else {
+				Toast.makeText(getApplicationContext(), "empty", Toast.LENGTH_SHORT).show();
+				Log.v(TAG, "empty: " + word.id);
+			}
 		}
 	}
 
@@ -237,6 +245,26 @@ public class SplashScreenActivity extends BaseTalkieActivity {
 				finish();
 			}
 		}, DELAY_TO_START_NEXT_ACTIVITY);
+	}
+
+	private void checkIfDownloadingCompleted() {
+
+		Log.v(TAG, "mFailedImagesCount: " + mFailedImagesCount);
+		Log.v(TAG, "mDownloadedImagesCount: " + mDownloadedImagesCount);
+		Log.v(TAG, "mCanceledImagesCount: " + mCanceledImagesCount);
+		Log.v(TAG, "mStartedLoadingImagesCount: " + mStartedLoadingImagesCount);
+		Log.v(TAG, "images count: " + mUpdateResponse.words.size());
+
+    	if(mDownloadedImagesCount + mFailedImagesCount +
+    			mCanceledImagesCount == mStartedLoadingImagesCount ) {
+	    	if( mDownloadProgressbar.getMax() == mDownloadedImagesCount ) {
+				continueToApp(getString(R.string.update_completed));
+	    	} else {
+				continueToApp(getString(R.string
+						.downloading_resources_faled));
+			}
+    	}
+    	
 	}
 
 }
