@@ -7,9 +7,9 @@ public class FruitsAndVeggies implements TalkieObject {
 
 	public final static String FRU_AND_VEGGY_KEY = "veggies"; 
 	
-	private static int[]  FRUITS_AND_VEGGIES_DRAWABLE_RESOURCES = { R.drawable.apple,
+	private static int[]  FRUITS_AND_VEGGIES_DRAWABLE_RESOURCES = { /*R.drawable.apple,
 		R.drawable.banana, R.drawable.orange, R.drawable.strawberry, R.drawable.tomato,
-		R.drawable.potato, R.drawable.pepper, R.drawable.kiwi, R.drawable.broccoli };
+		R.drawable.potato, R.drawable.pepper, R.drawable.kiwi, R.drawable.broccoli*/ };
 	
 	private static int[]  FRUITS_AND_VEGGIES_RAW_SOUND_RESOURCES = { R.raw.apple,
 		R.raw.banana, R.raw.orange, R.raw.strawberry, R.raw.tomato,

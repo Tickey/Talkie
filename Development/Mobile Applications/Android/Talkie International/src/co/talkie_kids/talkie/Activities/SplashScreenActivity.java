@@ -26,11 +26,13 @@ import co.talkie_kids.talkie.R;
 import co.talkie_kids.talkie.DataModels.Category;
 import co.talkie_kids.talkie.DataModels.UpdateResponse;
 import co.talkie_kids.talkie.DataModels.Word;
+import co.talkie_kids.talkie.DataModels.WordLanguageReference;
 import co.talkie_kids.talkie.Network.Utilities.ConnectionCheck;
 import co.talkie_kids.talkie.Network.Utilities.ServerHandler;
 import co.talkie_kids.talkie.Network.Utilities.ServerResponseListener;
 import co.talkie_kids.talkie.Resources.ImageLoader;
 import co.talkie_kids.talkie.utilities.DeviceSpecifications;
+import co.talkie_kids.talkie.utilities.StorageHelper;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -53,6 +55,8 @@ public class SplashScreenActivity extends BaseTalkieActivity {
 	protected int mDownloadedImagesCount = 0;
 	protected int mFailedImagesCount = 0;
 	protected int mStartedLoadingImagesCount = 0;
+
+	private boolean mIsFinished = false;
 
 	@Override
 	public void onCreate(Bundle savedInstance) {
@@ -193,10 +197,27 @@ public class SplashScreenActivity extends BaseTalkieActivity {
 				imageUrlsToBeDownloaded.add(imageUrl);
 			}
 		}
+		
+		for( WordLanguageReference wordLangRef 
+				: mUpdateResponse.wordLanguageReference) {
+			
+			String audioResourceUrl = mUpdateResponse.audioResourcesPathURL 
+					+ wordLangRef.audioResourceUrl; 
+			
+			if( !imageUrlsToBeDownloaded.contains(audioResourceUrl) ) {
+				imageUrlsToBeDownloaded.add(audioResourceUrl);
+			}
+		}
 
 		mDownloadProgressbar.setMax(imageUrlsToBeDownloaded.size()
 				+ mUpdateResponse.languages.size()
 				* mUpdateResponse.words.size());
+		
+		String fileName = imageUrlsToBeDownloaded.get(0)
+				;
+		Log.v(TAG, "---> hashedName: " + StorageHelper
+				.getHashedFileName(fileName) + " || url"
+				+ fileName);
 		
 		for( String imageUrl : imageUrlsToBeDownloaded) {
 		//for(int i = 0 ; i < mUpdateResponse.words.size() ; i++) {
@@ -219,17 +240,15 @@ public class SplashScreenActivity extends BaseTalkieActivity {
 							@Override
 							public void postAction(boolean isSuccessful, Object result) {
 								
-								Log.v(TAG, "is download Successful: " + isSuccessful);
-								
 								if (isSuccessful) {
 							    	mDownloadedImagesCount++;
 							    	
 							    	updateProgress(mDownloadedImagesCount);
-							    	
-					    			checkIfDownloadingCompleted();
 								} else {
 					    			mFailedImagesCount++;
 								}
+						    	
+				    			checkIfDownloadingCompleted();
 							}
 						});
 			} else {
@@ -241,19 +260,26 @@ public class SplashScreenActivity extends BaseTalkieActivity {
 	}
 
 	protected void continueToApp(String message) {
-		mActionLabel.setText(message);
-		
-		new Handler().postDelayed( new Runnable() {
+
+		if(!mIsFinished) {
 			
-			@Override
-			public void run() {
+			mIsFinished = true;
+			
+			mActionLabel.setText(message);
+			
+			
+			new Handler().postDelayed( new Runnable() {
 				
-				startActivity( new Intent(getApplicationContext(),
-						CategoryChooseActivity.class));
-				
-				finish();
-			}
-		}, DELAY_TO_START_NEXT_ACTIVITY);
+				@Override
+				public void run() {
+					
+					startActivity( new Intent(getApplicationContext(),
+							CategoryChooseActivity.class));
+					
+					finish();
+				}
+			}, DELAY_TO_START_NEXT_ACTIVITY);
+		}
 	}
 
 	private void checkIfDownloadingCompleted() {

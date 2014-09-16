@@ -24,15 +24,6 @@ public class DownloadFileTask extends AsyncTask<String, Void, File> {
 		
 		return this;
 	}
-	
-	@Override
-	protected void onPreExecute() {
-		super.onPreExecute();
-		
-		if(mServerResponseListener != null ) {
-			mServerResponseListener.preExecuteAction();
-		}
-	}
 
 	@Override
 	protected File doInBackground(String... params) {
