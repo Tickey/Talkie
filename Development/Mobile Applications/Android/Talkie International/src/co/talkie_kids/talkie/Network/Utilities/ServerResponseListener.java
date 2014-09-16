@@ -1,17 +1,17 @@
 package co.talkie_kids.talkie.Network.Utilities;
 
 
-public interface ServerActionListener {
+public interface ServerResponseListener {
 
 	/** 
      * Post action. 
      *  
      * @param isSuccessful 
      *            the is http request successful 
-     * @param json 
-     *            the json 
+     * @param result 
+     *            the result 
      */
-    void postAction(boolean isSuccessful, Object json);    
+    void postAction(boolean isSuccessful, Object result);    
       
     /** 
      * Pre execute action. 

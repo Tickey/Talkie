@@ -23,11 +23,11 @@ public class ServerHandler extends Activity {
     private ArrayList<NameValuePair> mHttpRequestParams;
     private String mJSONString = "";
     
-    private ServerActionListener mServerActionListener;
+    private ServerResponseListener mServerActionListener;
 	private boolean mIsResponseRequested = false;
 
     public ServerHandler (String httpMethod, ArrayList<NameValuePair> httpParams,
-    		String url,ServerActionListener serverActionListener, boolean isResponseRequested) {
+    		String url,ServerResponseListener serverActionListener, boolean isResponseRequested) {
     	mServerActionListener = serverActionListener;
         this.mHttpRequestParams = httpParams; 
         this.mUrl = url; 
@@ -37,7 +37,7 @@ public class ServerHandler extends Activity {
     }
 
     public ServerHandler (String httpMethod, String jsonString,
-    		String url,ServerActionListener serverActionListener, boolean isResponseRequested) {
+    		String url,ServerResponseListener serverActionListener, boolean isResponseRequested) {
     	mServerActionListener = serverActionListener;
         this.mJSONString = jsonString; 
         this.mUrl = url; 

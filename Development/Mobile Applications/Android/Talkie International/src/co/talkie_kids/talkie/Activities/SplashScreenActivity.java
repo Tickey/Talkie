@@ -11,7 +11,6 @@ import org.json.JSONObject;
 import android.animation.ObjectAnimator;
 import android.annotation.TargetApi;
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -28,16 +27,13 @@ import co.talkie_kids.talkie.DataModels.Category;
 import co.talkie_kids.talkie.DataModels.UpdateResponse;
 import co.talkie_kids.talkie.DataModels.Word;
 import co.talkie_kids.talkie.Network.Utilities.ConnectionCheck;
-import co.talkie_kids.talkie.Network.Utilities.ServerActionListener;
 import co.talkie_kids.talkie.Network.Utilities.ServerHandler;
+import co.talkie_kids.talkie.Network.Utilities.ServerResponseListener;
+import co.talkie_kids.talkie.Resources.ImageLoader;
 import co.talkie_kids.talkie.utilities.DeviceSpecifications;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import com.nostra13.universalimageloader.core.ImageLoader;
-import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
-import com.nostra13.universalimageloader.core.assist.FailReason;
-import com.nostra13.universalimageloader.core.listener.SimpleImageLoadingListener;
 
 public class SplashScreenActivity extends BaseTalkieActivity {
 	
@@ -56,7 +52,6 @@ public class SplashScreenActivity extends BaseTalkieActivity {
 
 	protected int mDownloadedImagesCount = 0;
 	protected int mFailedImagesCount = 0;
-	protected int mCanceledImagesCount = 0;
 	protected int mStartedLoadingImagesCount = 0;
 
 	@Override
@@ -64,12 +59,8 @@ public class SplashScreenActivity extends BaseTalkieActivity {
 		super.onCreate(savedInstance);
 
 	    getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-
-        ImageLoaderConfiguration config =
-        		new ImageLoaderConfiguration.Builder(getApplicationContext())
-            .build();
-        mImageLoader = ImageLoader.getInstance();
-        mImageLoader.init(config);
+	    
+	    mImageLoader = new ImageLoader(getApplicationContext());
         
         setContentView(R.layout.splash_screen);
         
@@ -104,8 +95,8 @@ public class SplashScreenActivity extends BaseTalkieActivity {
 		}
 	}
 	
-	private ServerActionListener mGetRetailersServerActionListener =
-			new ServerActionListener() {
+	private ServerResponseListener mGetRetailersServerActionListener =
+			new ServerResponseListener() {
 				
 				@Override
 				public void preExecuteAction() {
@@ -217,47 +208,32 @@ public class SplashScreenActivity extends BaseTalkieActivity {
 			
 			if( !TextUtils.isEmpty(imageUrl) ) {
 				
-				mImageLoader.loadImage( imageUrl,
-						new SimpleImageLoadingListener() {
-				    
-				    @Override
-		    		public void onLoadingStarted(String imageUri, View view) {
-		    			super.onLoadingStarted(imageUri, view);
-		    			mStartedLoadingImagesCount++;
-		    			
-		    		}
-				    
-				    @Override
-				    public void onLoadingComplete(String imageUri,
-				    		View view, Bitmap loadedImage) {
-				    	mDownloadedImagesCount++;
-				    	updateProgress(mDownloadedImagesCount);
-				    	
-		    			checkIfDownloadingCompleted(imageUri);
-				    	
-				    }
-				    
-				    @Override
-		    		public void onLoadingFailed(String imageUri, View view,
-		    				FailReason failReason) {
-		    			super.onLoadingFailed(imageUri, view, failReason);
-		    			
-		    			mFailedImagesCount++;
-		    			
-		    			checkIfDownloadingCompleted(imageUri);
-		    		}
-				    
-				    @Override
-		    		public void onLoadingCancelled(String imageUri,
-		    				View view) {
-		    			super.onLoadingCancelled(imageUri, view);
-		    			
-		    			mCanceledImagesCount++;
-		    			
-		    			checkIfDownloadingCompleted(imageUri);
-		    		}
-				});
+				mImageLoader.cacheFile(imageUrl,
+						new ServerResponseListener() {
+							
+							@Override
+							public void preExecuteAction() {
+				    			mStartedLoadingImagesCount++;
+							}
+							
+							@Override
+							public void postAction(boolean isSuccessful, Object result) {
+								
+								Log.v(TAG, "is download Successful: " + isSuccessful);
+								
+								if (isSuccessful) {
+							    	mDownloadedImagesCount++;
+							    	
+							    	updateProgress(mDownloadedImagesCount);
+							    	
+					    			checkIfDownloadingCompleted();
+								} else {
+					    			mFailedImagesCount++;
+								}
+							}
+						});
 			} else {
+    			mFailedImagesCount++;
 				Toast.makeText(getApplicationContext(), "empty", Toast.LENGTH_SHORT).show();
 				Log.v(TAG, "empty: " + imageUrl);
 			}
@@ -280,7 +256,7 @@ public class SplashScreenActivity extends BaseTalkieActivity {
 		}, DELAY_TO_START_NEXT_ACTIVITY);
 	}
 
-	private void checkIfDownloadingCompleted(String imageUrl) {
+	private void checkIfDownloadingCompleted() {
 		/*
 		Log.v(TAG, "mFailedImagesCount: " + mFailedImagesCount);
 		Log.v(TAG, "mDownloadedImagesCount: " + mDownloadedImagesCount);
@@ -288,8 +264,8 @@ public class SplashScreenActivity extends BaseTalkieActivity {
 		Log.v(TAG, "mStartedLoadingImagesCount: " + mStartedLoadingImagesCount);
 		Log.v(TAG, "images count: " + mUpdateResponse.words.size());
     	*/
-		if(mDownloadedImagesCount + mFailedImagesCount +
-    			mCanceledImagesCount == mStartedLoadingImagesCount ) {
+		if( mDownloadedImagesCount + mFailedImagesCount
+				== mStartedLoadingImagesCount ) {
 	    	if( mDownloadProgressbar.getMax() == mDownloadedImagesCount ) {
 				continueToApp(getString(R.string.update_completed));
 	    	} else {
