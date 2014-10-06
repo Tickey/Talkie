@@ -62,13 +62,13 @@
 		        android:layout_centerVertical="true">
 			    
 				<ImageView
-				    android:id="@+id/bubble"
+				    android:id="@id/bubble"
 				    android:layout_width="wrap_content"
 				    android:layout_height="wrap_content"
 		        	android:src="@drawable/choose_object_object_active"  />
 			    
 				<ImageView
-				    android:id="@+id/star"
+				    android:id="@id/star"
 				    android:layout_width="wrap_content"
 				    android:layout_height="wrap_content"
 				    android:layout_centerInParent="true"
@@ -86,13 +86,13 @@
 		        android:layout_centerVertical="true">
 			    
 				<ImageView
-				    android:id="@+id/bubble"
+				    android:id="@id/bubble"
 				    android:layout_width="wrap_content"
 				    android:layout_height="wrap_content"
 		        	android:src="@drawable/choose_object_object_active"  />
 			    
 				<ImageView
-				    android:id="@+id/star"
+				    android:id="@id/star"
 				    android:layout_width="wrap_content"
 				    android:layout_height="wrap_content"
 				    android:layout_centerInParent="true"
@@ -139,13 +139,13 @@
 		        android:layout_centerVertical="true">
 			    
 				<ImageView
-				    android:id="@+id/bubble"
+				    android:id="@id/bubble"
 				    android:layout_width="wrap_content"
 				    android:layout_height="wrap_content"
 		        	android:src="@drawable/choose_object_object_inactive"  />
 			    
 				<ImageView
-				    android:id="@+id/star"
+				    android:id="@id/star"
 				    android:layout_width="wrap_content"
 				    android:layout_height="wrap_content"
 				    android:layout_centerInParent="true"
@@ -163,13 +163,13 @@
 		        android:layout_centerVertical="true">
 			    
 				<ImageView
-				    android:id="@+id/bubble"
+				    android:id="@id/bubble"
 				    android:layout_width="wrap_content"
 				    android:layout_height="wrap_content"
 		        	android:src="@drawable/choose_object_object_inactive"  />
 			    
 				<ImageView
-				    android:id="@+id/star"
+				    android:id="@id/star"
 				    android:layout_width="wrap_content"
 				    android:layout_height="wrap_content"
 				    android:layout_centerInParent="true"
@@ -187,13 +187,13 @@
 		        android:layout_centerVertical="true">
 			    
 				<ImageView
-				    android:id="@+id/bubble"
+				    android:id="@id/bubble"
 				    android:layout_width="wrap_content"
 				    android:layout_height="wrap_content"
 		        	android:src="@drawable/choose_object_object_inactive"  />
 			    
 				<ImageView
-				    android:id="@+id/star"
+				    android:id="@id/star"
 				    android:layout_width="wrap_content"
 				    android:layout_height="wrap_content"
 				    android:layout_centerInParent="true"
@@ -211,13 +211,13 @@
 		        android:layout_centerVertical="true">
 		    
 				<ImageView
-				    android:id="@+id/animation"
+				    android:id="@id/animation"
 				    android:layout_width="wrap_content"
 				    android:layout_height="wrap_content"
 		        	android:src="@drawable/choose_object_animation_inactive"  />
 			    
 				<ImageView
-				    android:id="@+id/locked"
+				    android:id="@id/locked"
 				    android:layout_width="wrap_content"
 				    android:layout_height="wrap_content"
 				    android:layout_centerInParent="true" />
@@ -240,13 +240,13 @@
 		        android:layout_centerVertical="true">
 			    
 				<ImageView
-				    android:id="@+id/bubble"
+				    android:id="@id/bubble"
 				    android:layout_width="wrap_content"
 				    android:layout_height="wrap_content"
 		        	android:src="@drawable/choose_object_object_inactive"  />
 			    
 				<ImageView
-				    android:id="@+id/star"
+				    android:id="@id/star"
 				    android:layout_width="wrap_content"
 				    android:layout_height="wrap_content"
 				    android:layout_centerInParent="true"
@@ -264,13 +264,13 @@
 		        android:layout_centerVertical="true">
 			    
 				<ImageView
-				    android:id="@+id/bubble"
+				    android:id="@id/bubble"
 				    android:layout_width="wrap_content"
 				    android:layout_height="wrap_content"
 		        	android:src="@drawable/choose_object_object_inactive"  />
 			    
 				<ImageView
-				    android:id="@+id/star"
+				    android:id="@id/star"
 				    android:layout_width="wrap_content"
 				    android:layout_height="wrap_content"
 				    android:layout_centerInParent="true"
@@ -288,13 +288,13 @@
 		        android:layout_centerVertical="true">
 		    
 			<ImageView
-			    android:id="@+id/bubble"
+			    android:id="@id/bubble"
 			    android:layout_width="wrap_content"
 			    android:layout_height="wrap_content"
 	        	android:src="@drawable/choose_object_object_inactive"  />
 		    
 			<ImageView
-			    android:id="@+id/star"
+			    android:id="@id/star"
 			    android:layout_width="wrap_content"
 			    android:layout_height="wrap_content"
 			    android:layout_centerInParent="true"
@@ -312,7 +312,7 @@
 		        android:layout_marginLeft="180dp">
 			    
 				<ImageView
-				    android:id="@+id/animation"
+				    android:id="@id/animation"
 				    android:layout_width="wrap_content"
 				    android:layout_height="wrap_content"
 		        	android:src="@drawable/choose_object_animation_inactive"  />

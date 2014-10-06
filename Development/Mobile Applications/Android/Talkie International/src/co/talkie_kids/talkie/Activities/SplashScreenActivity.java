@@ -219,8 +219,8 @@ public class SplashScreenActivity extends BaseTalkieActivity {
 		}
 
 		mDownloadProgressbar.setMax(imageUrlsToBeDownloaded.size()
-				+ mUpdateResponse.languages.size()
-				* mUpdateResponse.words.size());
+				/*+ mUpdateResponse.languages.size()
+				* mUpdateResponse.words.size()*/);
 
 		String fileName = imageUrlsToBeDownloaded.get(0);
 		Log.v(TAG,
@@ -228,12 +228,6 @@ public class SplashScreenActivity extends BaseTalkieActivity {
 						+ " || url" + fileName);
 
 		for (String imageUrl : imageUrlsToBeDownloaded) {
-			// for(int i = 0 ; i < mUpdateResponse.words.size() ; i++) {
-
-			// Word word = mUpdateResponse.words.get(i);
-
-			// String imageUrl = resourcesBasePath + word.imageName;
-			// Log.v(TAG, imageUrl);
 
 			if (!TextUtils.isEmpty(imageUrl)) {
 
@@ -260,8 +254,6 @@ public class SplashScreenActivity extends BaseTalkieActivity {
 				});
 			} else {
 				mFailedImagesCount++;
-				// Toast.makeText(getApplicationContext(), "empty",
-				// Toast.LENGTH_SHORT).show();
 				Log.v(TAG, "empty: " + imageUrl);
 			}
 		}
@@ -269,7 +261,7 @@ public class SplashScreenActivity extends BaseTalkieActivity {
 
 	protected void continueToApp(String message) {
 
-		if (!mIsFinished) {
+		//if (!mIsFinished) {
 
 			mIsFinished = true;
 
@@ -286,7 +278,7 @@ public class SplashScreenActivity extends BaseTalkieActivity {
 					finish();
 				}
 			}, DELAY_TO_START_NEXT_ACTIVITY);
-		}
+		//}
 	}
 
 	private void checkIfDownloadingCompleted() {
@@ -297,7 +289,8 @@ public class SplashScreenActivity extends BaseTalkieActivity {
 		 * "mStartedLoadingImagesCount: " + mStartedLoadingImagesCount);
 		 * Log.v(TAG, "images count: " + mUpdateResponse.words.size());
 		 */
-		if (mDownloadedImagesCount + mFailedImagesCount == mStartedLoadingImagesCount) {
+		if (mDownloadedImagesCount + mFailedImagesCount ==
+				mDownloadProgressbar.getMax()) {
 			if (mDownloadProgressbar.getMax() == mDownloadedImagesCount) {
 				continueToApp(getString(R.string.update_completed));
 			} else {

@@ -12,4 +12,8 @@ public class Word {
 	
 	@SerializedName("language_id")
 	public int languageId;
+	
+	@SerializedName("category_id")
+	public int categoryId;
+	
 }
