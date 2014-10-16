@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	
+    <string name="url_authenticate">http://tickey.herokuapp.com/users/authenticate.json</string>
+    <string name="url_register">http://tickey.herokuapp.com/users/register_user.json</string>
+    <string name="url_make_order">http://tickey.herokuapp.com/card_purches/make_order.json</string>
+    
+</resources>

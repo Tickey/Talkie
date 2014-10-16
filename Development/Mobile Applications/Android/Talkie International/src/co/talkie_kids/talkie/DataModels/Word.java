@@ -9,11 +9,11 @@ public class Word {
 
 	@SerializedName("drawable")
 	public String imageName;
-	
+
 	@SerializedName("language_id")
 	public int languageId;
-	
+
 	@SerializedName("category_id")
 	public int categoryId;
-	
+
 }

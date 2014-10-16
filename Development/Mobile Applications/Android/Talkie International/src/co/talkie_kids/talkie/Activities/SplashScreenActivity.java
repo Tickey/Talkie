@@ -219,8 +219,9 @@ public class SplashScreenActivity extends BaseTalkieActivity {
 		}
 
 		mDownloadProgressbar.setMax(imageUrlsToBeDownloaded.size()
-				/*+ mUpdateResponse.languages.size()
-				* mUpdateResponse.words.size()*/);
+		/*
+		 * + mUpdateResponse.languages.size() mUpdateResponse.words.size()
+		 */);
 
 		String fileName = imageUrlsToBeDownloaded.get(0);
 		Log.v(TAG,
@@ -261,24 +262,24 @@ public class SplashScreenActivity extends BaseTalkieActivity {
 
 	protected void continueToApp(String message) {
 
-		//if (!mIsFinished) {
+		// if (!mIsFinished) {
 
-			mIsFinished = true;
+		mIsFinished = true;
 
-			mActionLabel.setText(message);
+		mActionLabel.setText(message);
 
-			new Handler().postDelayed(new Runnable() {
+		new Handler().postDelayed(new Runnable() {
 
-				@Override
-				public void run() {
+			@Override
+			public void run() {
 
-					startActivity(new Intent(getApplicationContext(),
-							CategoryChooseActivity.class));
+				startActivity(new Intent(getApplicationContext(),
+						CategoryChooseActivity.class));
 
-					finish();
-				}
-			}, DELAY_TO_START_NEXT_ACTIVITY);
-		//}
+				finish();
+			}
+		}, DELAY_TO_START_NEXT_ACTIVITY);
+		// }
 	}
 
 	private void checkIfDownloadingCompleted() {
@@ -289,8 +290,8 @@ public class SplashScreenActivity extends BaseTalkieActivity {
 		 * "mStartedLoadingImagesCount: " + mStartedLoadingImagesCount);
 		 * Log.v(TAG, "images count: " + mUpdateResponse.words.size());
 		 */
-		if (mDownloadedImagesCount + mFailedImagesCount ==
-				mDownloadProgressbar.getMax()) {
+		if (mDownloadedImagesCount + mFailedImagesCount == mDownloadProgressbar
+				.getMax()) {
 			if (mDownloadProgressbar.getMax() == mDownloadedImagesCount) {
 				continueToApp(getString(R.string.update_completed));
 			} else {

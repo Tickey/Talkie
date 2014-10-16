@@ -6,14 +6,14 @@ public class Category {
 
 	@SerializedName("id")
 	public int id;
-	
+
 	@SerializedName("unavailable_drawable")
 	public String inactiveImageName;
-	
+
 	@SerializedName("opened_drawable")
 	public String viewedImageName;
-	
+
 	@SerializedName("closed_drawable")
 	public String activeImageName;
-	
+
 }
