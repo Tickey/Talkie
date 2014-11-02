@@ -1,7 +1,7 @@
-package co.talkie_kids.talkie.Data;
+package co.talkie_kids.talkie.data;
 
 import co.talkie_kids.talkie.R;
-import co.talkie_kids.talkie.DataModels.TalkieObject;
+import co.talkie_kids.talkie.data.models.TalkieObject;
 
 public class FruitsAndVeggies implements TalkieObject {
 

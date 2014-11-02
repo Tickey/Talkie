@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/chooseCategoryBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/choose_object_bg_clean" />
+
+    <ImageView
+        android:id="@+id/chooseCategoryCloudsTopLower"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@drawable/choose_category_clouds_top_2" />
+
+    <ImageView
+        android:id="@+id/chooseCategoryCloudsTopUpper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@drawable/choose_category_clouds_top_1" />
+    
+    <!-- content goes here -->
+    
+    <LinearLayout
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal" >
+        
+    </LinearLayout>
+    
+    <!-- content endss here -->
+
+    <ImageView
+        android:id="@+id/chooseCategoryCloudsBottomLower"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:rotation="180"
+        android:scaleType="fitXY"
+        android:src="@drawable/choose_category_clouds_top_2" />
+
+    <ImageView
+        android:id="@+id/chooseCategoryCloudsBottomUpper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/powered_by_vivacom_bg" />
+
+</RelativeLayout>

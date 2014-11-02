@@ -1,4 +1,4 @@
-package co.talkie_kids.talkie.Parcelable;
+package co.talkie_kids.talkie.parcelable;
 
 import java.io.BufferedReader;
 import java.io.File;

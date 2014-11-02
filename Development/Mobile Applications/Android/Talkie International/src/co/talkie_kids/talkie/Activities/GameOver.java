@@ -1,4 +1,4 @@
-package co.talkie_kids.talkie.Activities;
+package co.talkie_kids.talkie.activities;
 
 import android.os.Bundle;
 import android.widget.TextView;

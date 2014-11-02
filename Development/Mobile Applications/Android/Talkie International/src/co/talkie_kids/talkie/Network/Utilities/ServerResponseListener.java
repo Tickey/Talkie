@@ -1,4 +1,4 @@
-package co.talkie_kids.talkie.Network.Utilities;
+package co.talkie_kids.talkie.network.utilities;
 
 
 public interface ServerResponseListener {

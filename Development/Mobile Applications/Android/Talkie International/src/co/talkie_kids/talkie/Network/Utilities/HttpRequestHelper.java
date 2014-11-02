@@ -1,4 +1,4 @@
-package co.talkie_kids.talkie.Network.Utilities;
+package co.talkie_kids.talkie.network.utilities;
 
 import java.io.IOException;
 import java.io.InputStream;

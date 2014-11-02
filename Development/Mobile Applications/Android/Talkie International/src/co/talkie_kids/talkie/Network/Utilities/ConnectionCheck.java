@@ -1,4 +1,4 @@
-package co.talkie_kids.talkie.Network.Utilities;
+package co.talkie_kids.talkie.network.utilities;
 
 import android.content.Context;
 import android.net.ConnectivityManager;

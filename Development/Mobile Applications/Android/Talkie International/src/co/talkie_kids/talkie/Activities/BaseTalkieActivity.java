@@ -1,4 +1,4 @@
-package co.talkie_kids.talkie.Activities;
+package co.talkie_kids.talkie.activities;
 
 import java.util.Map;
 
@@ -13,8 +13,8 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import co.talkie_kids.talkie.R;
-import co.talkie_kids.talkie.MediaPlayer.MediaPlayerOptimizer;
-import co.talkie_kids.talkie.Resources.BasicConstants;
+import co.talkie_kids.talkie.mediaplayer.MediaPlayerOptimizer;
+import co.talkie_kids.talkie.resources.BasicConstants;
 
 import com.google.analytics.tracking.android.Fields;
 import com.google.analytics.tracking.android.GoogleAnalytics;

@@ -1,4 +1,4 @@
-package co.talkie_kids.talkie.Activities;
+package co.talkie_kids.talkie.activities;
 
 import java.util.ArrayList;
 
@@ -14,8 +14,8 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import co.talkie_kids.talkie.R;
-import co.talkie_kids.talkie.Network.Utilities.ConnectionCheck;
-import co.talkie_kids.talkie.Resources.Animations;
+import co.talkie_kids.talkie.network.utilities.ConnectionCheck;
+import co.talkie_kids.talkie.resources.Animations;
 
 public class AnimationActivity extends BaseTalkieActivity {
  

@@ -7,73 +7,81 @@
         android:minSdkVersion="8"
         android:targetSdkVersion="19" />
 
-    <uses-permission android:name="android.permission.RECORD_AUDIO" /> 
-    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
     <!-- <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/> -->
-    <uses-permission android:name="android.permission.VIBRATE"/>
-    
-    <!--  Internet Permissions -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!-- Internet Permissions -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
-                 android:maxSdkVersion="18" />
-    
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-		android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" >
-    
-	    <!-- Used for install referral measurement-->
-		<service android:name="com.google.analytics.tracking.android.CampaignTrackingService"/>
-		<receiver android:name="com.google.analytics.tracking.android.CampaignTrackingReceiver" android:exported="true">
-		  <intent-filter>
-		    <action android:name="com.android.vending.INSTALL_REFERRER" />
-		  </intent-filter>
-		</receiver>
-		
+        android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" >
+
+        <!-- Used for install referral measurement -->
+        <service android:name="com.google.analytics.tracking.android.CampaignTrackingService" />
+
+        <receiver
+            android:name="com.google.analytics.tracking.android.CampaignTrackingReceiver"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+
         <activity
-            android:name="co.talkie_kids.talkie.Activities.LevelActivity"
-        	android:screenOrientation="landscape" android:configChanges="orientation|keyboardHidden"
+            android:name="co.talkie_kids.talkie.activities.LevelActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/app_name"
-			android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" >
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" >
         </activity>
         <activity
-            android:name="co.talkie_kids.talkie.Activities.LevelChooseActivity"
-        	android:screenOrientation="landscape" android:configChanges="orientation|keyboardHidden"
+            android:name="co.talkie_kids.talkie.activities.LanguageChooseActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/app_name"
-		android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" >
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" >
         </activity>
-        
         <activity
-            android:name="co.talkie_kids.talkie.Activities.AnimationActivity"
-        	android:screenOrientation="landscape" android:configChanges="orientation|keyboardHidden"
+            android:name="co.talkie_kids.talkie.activities.LevelChooseActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/app_name"
-		android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" >
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" >
         </activity>
-        
         <activity
-            android:name="co.talkie_kids.talkie.Activities.CategoryChooseActivity"
-        	android:screenOrientation="landscape"
+            android:name="co.talkie_kids.talkie.activities.AnimationActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/app_name"
-		android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" >
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" >
         </activity>
-        
         <activity
-            android:name="co.talkie_kids.talkie.Activities.SplashScreenActivity"
-        	android:screenOrientation="landscape"
+            android:name="co.talkie_kids.talkie.activities.CategoryChooseActivity"
             android:label="@string/app_name"
-			android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" >
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" >
+        </activity>
+        <activity
+            android:name="co.talkie_kids.talkie.activities.SplashScreenActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
-    
+
 </manifest>

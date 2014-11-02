@@ -1,4 +1,4 @@
-package co.talkie_kids.talkie.Network.Utilities;
+package co.talkie_kids.talkie.network.utilities;
 
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -9,7 +9,7 @@ import org.json.JSONObject;
 
 import android.app.Activity;
 import android.os.AsyncTask;
-import co.talkie_kids.talkie.Parcelable.InputStreamToJSON;
+import co.talkie_kids.talkie.parcelable.InputStreamToJSON;
 
 public class ServerHandler extends Activity { 
 

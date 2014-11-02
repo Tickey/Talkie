@@ -1,4 +1,4 @@
-package co.talkie_kids.talkie.Activities;
+package co.talkie_kids.talkie.activities;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -19,11 +19,11 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import co.talkie_kids.talkie.R;
-import co.talkie_kids.talkie.Data.Animals;
-import co.talkie_kids.talkie.Data.FruitsAndVeggies;
-import co.talkie_kids.talkie.DataModels.TalkieObject;
-import co.talkie_kids.talkie.MediaPlayer.MediaPlayerOptimizer;
-import co.talkie_kids.talkie.Parcelable.JsonDataParser;
+import co.talkie_kids.talkie.data.Animals;
+import co.talkie_kids.talkie.data.FruitsAndVeggies;
+import co.talkie_kids.talkie.data.models.TalkieObject;
+import co.talkie_kids.talkie.mediaplayer.MediaPlayerOptimizer;
+import co.talkie_kids.talkie.parcelable.JsonDataParser;
 
 public class LevelActivity extends BaseTalkieActivity {
 

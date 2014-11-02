@@ -1,4 +1,4 @@
-package co.talkie_kids.talkie.Resources;
+package co.talkie_kids.talkie.resources;
 
 import co.talkie_kids.talkie.R;
 

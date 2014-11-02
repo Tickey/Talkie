@@ -1,4 +1,4 @@
-package co.talkie_kids.talkie.Activities;
+package co.talkie_kids.talkie.activities;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -22,14 +22,14 @@ import android.view.animation.DecelerateInterpolator;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import co.talkie_kids.talkie.R;
-import co.talkie_kids.talkie.DataModels.Category;
-import co.talkie_kids.talkie.DataModels.UpdateResponse;
-import co.talkie_kids.talkie.DataModels.Word;
-import co.talkie_kids.talkie.DataModels.WordLanguageReference;
-import co.talkie_kids.talkie.Network.Utilities.ConnectionCheck;
-import co.talkie_kids.talkie.Network.Utilities.ServerHandler;
-import co.talkie_kids.talkie.Network.Utilities.ServerResponseListener;
-import co.talkie_kids.talkie.Resources.ImageLoader;
+import co.talkie_kids.talkie.data.models.Category;
+import co.talkie_kids.talkie.data.models.UpdateResponse;
+import co.talkie_kids.talkie.data.models.Word;
+import co.talkie_kids.talkie.data.models.WordLanguageReference;
+import co.talkie_kids.talkie.network.utilities.ConnectionCheck;
+import co.talkie_kids.talkie.network.utilities.ServerHandler;
+import co.talkie_kids.talkie.network.utilities.ServerResponseListener;
+import co.talkie_kids.talkie.resources.ImageLoader;
 import co.talkie_kids.talkie.utilities.DeviceSpecifications;
 import co.talkie_kids.talkie.utilities.StorageHelper;
 

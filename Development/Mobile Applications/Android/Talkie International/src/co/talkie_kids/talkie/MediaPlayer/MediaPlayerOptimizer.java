@@ -1,4 +1,4 @@
-package co.talkie_kids.talkie.MediaPlayer;
+package co.talkie_kids.talkie.mediaplayer;
 
 import java.io.IOException;
 

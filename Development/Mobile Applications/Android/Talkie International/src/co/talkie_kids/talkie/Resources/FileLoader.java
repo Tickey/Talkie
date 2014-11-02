@@ -1,11 +1,11 @@
-package co.talkie_kids.talkie.Resources;
+package co.talkie_kids.talkie.resources;
 
 import java.io.File;
 
 import android.content.Context;
 import android.util.Log;
-import co.talkie_kids.talkie.Network.Utilities.DownloadFileTask;
-import co.talkie_kids.talkie.Network.Utilities.ServerResponseListener;
+import co.talkie_kids.talkie.network.utilities.DownloadFileTask;
+import co.talkie_kids.talkie.network.utilities.ServerResponseListener;
 import co.talkie_kids.talkie.utilities.StorageHelper;
 
 public class FileLoader {

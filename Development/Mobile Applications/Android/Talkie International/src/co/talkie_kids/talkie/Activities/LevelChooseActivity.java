@@ -1,4 +1,4 @@
-package co.talkie_kids.talkie.Activities;
+package co.talkie_kids.talkie.activities;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,9 +10,9 @@ import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import android.widget.Toast;
 import co.talkie_kids.talkie.R;
-import co.talkie_kids.talkie.Data.FruitsAndVeggies;
-import co.talkie_kids.talkie.Network.Utilities.ConnectionCheck;
-import co.talkie_kids.talkie.Parcelable.JsonDataParser;
+import co.talkie_kids.talkie.data.FruitsAndVeggies;
+import co.talkie_kids.talkie.network.utilities.ConnectionCheck;
+import co.talkie_kids.talkie.parcelable.JsonDataParser;
 
 public class LevelChooseActivity extends BaseTalkieActivity {
 

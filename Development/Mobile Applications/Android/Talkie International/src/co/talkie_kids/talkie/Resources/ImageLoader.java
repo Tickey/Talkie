@@ -1,4 +1,4 @@
-package co.talkie_kids.talkie.Resources;
+package co.talkie_kids.talkie.resources;
 
 import java.io.File;
 import java.io.InputStream;
@@ -7,8 +7,8 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.util.Log;
-import co.talkie_kids.talkie.Network.Utilities.DownloadFileTask;
-import co.talkie_kids.talkie.Network.Utilities.ServerResponseListener;
+import co.talkie_kids.talkie.network.utilities.DownloadFileTask;
+import co.talkie_kids.talkie.network.utilities.ServerResponseListener;
 import co.talkie_kids.talkie.utilities.StorageHelper;
 
 public class ImageLoader extends FileLoader {
