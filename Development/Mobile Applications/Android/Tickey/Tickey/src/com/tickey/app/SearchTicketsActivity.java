@@ -1,5 +1,8 @@
 package com.tickey.app;
 
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.Collection;
 
 import org.json.JSONArray;
@@ -7,7 +10,10 @@ import org.json.JSONException;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Typeface;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.RemoteException;
@@ -19,6 +25,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.facebook.Request;
 import com.facebook.Request.GraphUserCallback;
@@ -49,6 +56,8 @@ public class SearchTicketsActivity extends BaseActivity implements
 	private static final String HTTP_BODY_PARAM_KEY_LINE_NAME = "line_name";
 
 	private static final String URL_ACTIVE_CARDS = "http://tickey.herokuapp.com/card_purches/user_active_cards/%d/%s.json";
+
+	public static final String USER_NAME = "user_name";
 	private TextView mTVName;
 	private TextView mTVTicketsCount;
 	private TextView mTVScanner;
@@ -60,24 +69,32 @@ public class SearchTicketsActivity extends BaseActivity implements
 
 	private Button mBTBuy;
 
+	private TextView mTVStatus;
+
+	private int mTiketsCount = 0;
+
+	private ImageView mIVUserAvatar;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
 		setContentView(R.layout.fragment_search_tickets);
 
-		mUserId = getIntent().getIntExtra(HTTP_BODY_PARAM_KEY_USER_ID, 0);
+		mUserId = getIntent().getIntExtra(HTTP_BODY_PARAM_KEY_USER_ID,
+				mTiketsCount);
 
-		if(!getIntent().getBooleanExtra("has_ticket", false)) {
+		if (!getIntent().getBooleanExtra("has_ticket", false)) {
 			iBeaconManager.bind(this);
 		}
-		
+
 		mTVName = (TextView) findViewById(R.id.tvName);
 		mTVTicketsCount = (TextView) findViewById(R.id.tvTicketsCount);
 		mTVScanner = (TextView) findViewById(R.id.tvScanner);
 		mBTBuy = (Button) findViewById(R.id.btBuy);
-
+		mTVStatus = (TextView) findViewById(R.id.tvYouAreInBus);
 		mLLBuy = (LinearLayout) findViewById(R.id.llBuy);
+		mIVUserAvatar = (ImageView) findViewById(R.id.imageView1);
 
 		mLLBuy.setVisibility(View.GONE);
 
@@ -87,7 +104,7 @@ public class SearchTicketsActivity extends BaseActivity implements
 					@Override
 					public void onClick(View v) {
 						finish();
-						
+
 						Session session = Session.getActiveSession();
 
 						if (session != null) {
@@ -102,19 +119,7 @@ public class SearchTicketsActivity extends BaseActivity implements
 						startActivity(intent);
 					}
 				});
-		mBTBuy.setOnClickListener(new OnClickListener() {
-
-					@Override
-					public void onClick(View v) {
-
-						Intent intent = new Intent(getApplicationContext(),
-								ChooseAndBuyTicketActivity.class);
-
-						intent.putExtra(HTTP_BODY_PARAM_KEY_USER_ID, mUserId);
-
-						startActivity(intent);
-					}
-				});
+		mBTBuy.setOnClickListener(mBuyClickListener);
 
 		Typeface norwester = Typeface.createFromAsset(getAssets(),
 				"norwester.ttf");
@@ -131,7 +136,7 @@ public class SearchTicketsActivity extends BaseActivity implements
 		mTVName.setTypeface(norwester);
 		mTVScanner.setTypeface(norwester);
 		mTVTicketsCount.setTypeface(halvetica);
-		((TextView)findViewById(R.id.tvYouAreInBus)).setTypeface(norwester);
+		mTVStatus.setTypeface(norwester);
 
 		mTVTicketsCount.setText(getString(R.string.tickets_count, 0));
 
@@ -145,20 +150,24 @@ public class SearchTicketsActivity extends BaseActivity implements
 			public void onCompleted(GraphUser user, Response response) {
 				if (user != null) {
 					mTVName.setText(user.getName());
+
+					new AsyncTask<String, Void, Bitmap>() {
+
+						@Override
+						protected Bitmap doInBackground(String... params) {
+							String userId = params[0];
+							return getFacebookProfilePicture(userId);
+						}
+						
+						protected void onPostExecute(Bitmap userAvatar) {
+							if(userAvatar != null) {
+								mIVUserAvatar.setImageBitmap(userAvatar);
+							}
+						};
+					}.execute(user.getId());
 				}
 			}
 		}).executeAsync();
-		
-
-		if(getIntent().getBooleanExtra("has_ticket", false)) {
-			
-			mBTBuy.setText("check in");
-			mBTBuy.setOnClickListener(null);
-
-			mTVScanner.setVisibility(View.GONE);
-
-			mLLBuy.setVisibility(View.VISIBLE);
-		}
 	}
 
 	@Override
@@ -166,6 +175,113 @@ public class SearchTicketsActivity extends BaseActivity implements
 		super.onDestroy();
 		iBeaconManager.unBind(this);
 	}
+
+	public static Bitmap getFacebookProfilePicture(String userID) {
+		Bitmap bitmap;
+		try {
+			URL imageURL = new URL("https://graph.facebook.com/" + userID
+					+ "/picture?type=large");
+			bitmap = BitmapFactory.decodeStream(imageURL.openConnection()
+					.getInputStream());
+		} catch (MalformedURLException e) {
+			bitmap = null;
+			e.printStackTrace();
+		} catch (IOException e) {
+			bitmap = null;
+			e.printStackTrace();
+		}
+
+		return bitmap;
+	}
+
+	private OnClickListener mBuyClickListener = new OnClickListener() {
+
+		@Override
+		public void onClick(View v) {
+
+			Intent intent = new Intent(getApplicationContext(),
+					ChooseAndBuyTicketActivity.class);
+
+			intent.putExtra(HTTP_BODY_PARAM_KEY_USER_ID, mUserId);
+
+			intent.putExtra(USER_NAME, mTVName.getText());
+
+			startActivity(intent);
+		}
+	};
+
+	protected void onNewIntent(Intent intent) {
+		super.onNewIntent(intent);
+
+		if (intent.getBooleanExtra("has_ticket", false)) {
+			mTiketsCount++;
+
+			mTVTicketsCount.setText(getString(R.string.tickets_count,
+					mTiketsCount));
+
+			mBTBuy.setText("check in");
+			mBTBuy.setOnClickListener(new OnClickListener() {
+
+				private ProgressDialog mLoading;
+
+				@Override
+				public void onClick(View v) {
+					if (mTiketsCount > 0) {
+						mLoading = ProgressDialog.show(
+								SearchTicketsActivity.this, "",
+								getString(R.string.loading), true);
+
+						new Handler().postDelayed(new Runnable() {
+
+							@Override
+							public void run() {
+								mLoading.dismiss();
+								mTVStatus
+										.setText(getString(R.string.checked_in));
+
+								mTiketsCount--;
+
+								mTVTicketsCount.setText(getString(
+										R.string.tickets_count, mTiketsCount));
+
+								mBTBuy.setText("New bus?");
+
+								mBTBuy.setOnClickListener(new OnClickListener() {
+
+									@Override
+									public void onClick(View v) {
+
+										mBTBuy.setText("buy");
+										mBTBuy.setOnClickListener(mBuyClickListener);
+
+										mTVScanner.setVisibility(View.VISIBLE);
+
+										mLLBuy.setVisibility(View.GONE);
+										mTVStatus
+												.setText(getString(R.string.you_are_in_bus));
+										iBeaconManager
+												.bind(SearchTicketsActivity.this);
+
+										mTVScanner.setText(Html
+												.fromHtml(getString(R.string.scanning_lines)));
+									}
+								});
+							}
+						}, 500);
+					} else {
+						mBTBuy.setText("buy");
+						mBTBuy.setOnClickListener(mBuyClickListener);
+						Toast.makeText(getApplicationContext(), "no tickets",
+								Toast.LENGTH_SHORT).show();
+					}
+				}
+			});
+
+			mTVScanner.setVisibility(View.GONE);
+
+			mLLBuy.setVisibility(View.VISIBLE);
+		}
+	};
 
 	ServerActionListener mSaveActionListener = new ServerActionListener() {
 

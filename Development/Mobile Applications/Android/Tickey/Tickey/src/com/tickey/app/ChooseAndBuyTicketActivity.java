@@ -5,10 +5,12 @@ import java.util.HashMap;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -20,7 +22,6 @@ import android.widget.Toast;
 import bg.teracomm.iap.IAPInfo;
 import bg.teracomm.iap.IAPInterface;
 import bg.teracomm.iap.IAPService;
-import bg.teracomm.iap.Transaction;
 
 import com.tickey.app.utils.server.ServerActionListener;
 import com.tickey.app.utils.server.ServerHandler;
@@ -125,6 +126,11 @@ public class ChooseAndBuyTicketActivity extends BaseActivity implements
 				});
 
 		mTVTicketsCount.setText(getString(R.string.tickets_count, 0));
+		String userName = getIntent().getStringExtra(
+				SearchTicketsActivity.USER_NAME);
+		if (!TextUtils.isEmpty(userName)) {
+			mTVName.setText(userName);
+		}
 
 	}
 
@@ -190,39 +196,42 @@ public class ChooseAndBuyTicketActivity extends BaseActivity implements
 				getApplicationContext());
 	}
 
+	private ProgressDialog mLoading;
+
 	protected void purchace(double price, String paymentProductName) {
-		Toast.makeText(getApplicationContext(), "payment successfull",
-				Toast.LENGTH_SHORT).show();
-		
+
+		mLoading = ProgressDialog.show(this, "",
+				getString(R.string.loading), true);
+
 		new Handler().postDelayed(new Runnable() {
-			
+
 			@Override
 			public void run() {
+				mLoading.dismiss();
+				Toast.makeText(getApplicationContext(), "payment successfull",
+						Toast.LENGTH_SHORT).show();
 				finish();
 				Intent intent = new Intent(getApplicationContext(),
 						SearchTicketsActivity.class);
-				
+				intent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP
+						| Intent.FLAG_ACTIVITY_CLEAR_TOP);
+
 				intent.putExtra("has_ticket", true);
-				
-				startActivity( intent);
-				
+
+				startActivity(intent);
+
 			}
 		}, 500);
-/*
-		Transaction transaction = iapService.purchaseSinglePayment(
-				paymentProductName, // -- the product name
-				price, // -- the price of the product
-				IAPInfo.CURRENCY_BGN 
-									 * -- the currency of the product, currently
-									 * supported: CURRENCY_BGN CURRENCY_EUR
-									 * CURRENCY_USD CURRENCY_MKD
-									 
-		);
-		if (transaction != null) {
-			mTransactionId = transaction.getTransactionId();
-		}
-		Log.i("onClick", "purchase requested, transaction id: "
-				+ mTransactionId);
-		*/
+		/*
+		 * Transaction transaction = iapService.purchaseSinglePayment(
+		 * paymentProductName, // -- the product name price, // -- the price of
+		 * the product IAPInfo.CURRENCY_BGN -- the currency of the product,
+		 * currently supported: CURRENCY_BGN CURRENCY_EUR CURRENCY_USD
+		 * CURRENCY_MKD
+		 * 
+		 * ); if (transaction != null) { mTransactionId =
+		 * transaction.getTransactionId(); } Log.i("onClick",
+		 * "purchase requested, transaction id: " + mTransactionId);
+		 */
 	}
 }

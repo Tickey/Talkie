@@ -21,10 +21,10 @@
         android:paddingLeft="@dimen/activity_vertical_margin"
         android:paddingRight="@dimen/activity_vertical_margin" >
 
-        <ImageView
+        <com.tickey.app.view.custom.RoundedImageView
             android:id="@+id/imageView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
             android:src="@drawable/profil_small" />
