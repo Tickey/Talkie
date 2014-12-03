@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Tickey</string>
+    <string name="register">Регистрация</string>
+    <string name="feed">Iнформационен Kанал</string>
+    <string name="birth_date">дата на раждане</string>
+    <string name="scanning_lines"><![CDATA[търси се <font color="#8DC43F">линията...</font>]]></string>
+    <string name="check_for_tickets"><![CDATA[проверка за <font color="#8DC43F">билети...</font>]]></string>
+    <string name="tickets_count">%d билета</string>
+    <string name="first_name">име</string>
+    <string name="last_name">фамилия</string>
+    <string name="email">имейл</string>
+    <string name="password">парола</string>
+    <string name="confim_password">повтори парола</string>
+    <string name="sign_in">влез</string>
+    <string name="loading">Зарежда...</string>
+    <string name="logout">Изход</string>
+    <string name="go">давай</string>
+    <string name="buy">купи</string>
+    <string name="remember_me">запомни ме</string>
+    <string name="you_are_in_bus">Ти си в автобус 280</string>
+    <string name="checked_in">You are checked in</string>
+    <string name="sign_up"><u>не си регистриран?</u></string>
+    <string name="facebook_login">влез с facebook</string>
+    <string name="app_id">773538616052349</string>
+
+</resources>

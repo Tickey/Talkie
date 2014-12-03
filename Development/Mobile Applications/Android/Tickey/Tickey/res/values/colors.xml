@@ -3,9 +3,14 @@
     
     <color name="green_transparent">#AA8DC63F</color>
     <color name="white_transparent">#55FFFFFF</color>
-    <color name="dark_gray">#58585A</color>
+    <color name="dark_gray">#3C3D3D</color>
     <color name="gray_text">#454545</color>
     <color name="green_text">#8DC43F</color>
-    <color name="dark_gray_pressed">#6C6C6C</color>
+    <color name="dark_gray_pressed">#696969</color>
+    <color name="primary">#A5CE39</color>
+    <color name="primary_dark">#85A62E</color>
+    <color name="base_app_background">#EEEEEE</color>
+    <color name="facebook">#004A80</color>
+    <color name="facebook_pressed">#0368B1</color>
 
 </resources>

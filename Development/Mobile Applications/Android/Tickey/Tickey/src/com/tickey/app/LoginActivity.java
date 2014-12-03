@@ -1,39 +1,43 @@
 package com.tickey.app;
 
-import java.io.UnsupportedEncodingException;
-import java.security.NoSuchAlgorithmException;
+import java.lang.reflect.Type;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Map;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import android.app.ProgressDialog;
-import android.content.Context;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.inputmethod.EditorInfo;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.TextView.OnEditorActionListener;
 import android.widget.Toast;
 
-import com.facebook.Request;
+import com.android.volley.Request.Method;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response.ErrorListener;
+import com.android.volley.Response.Listener;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.Volley;
 import com.facebook.Request.GraphUserCallback;
-import com.facebook.model.GraphUser;
 import com.facebook.Response;
 import com.facebook.Session;
 import com.facebook.SessionState;
 import com.facebook.UiLifecycleHelper;
-import com.tickey.app.utils.format.StringFormat;
-import com.tickey.app.utils.server.ServerActionListener;
-import com.tickey.app.utils.server.ServerHandler;
+import com.facebook.model.GraphUser;
+import com.facebook.widget.LoginButton;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import com.tickey.app.data.model.ServerResponse;
+import com.tickey.app.data.model.User;
+import com.tickey.app.network.helper.GsonRequest;
 
 public class LoginActivity extends BaseActivity {
 
@@ -44,15 +48,20 @@ public class LoginActivity extends BaseActivity {
 	private static final String HTTP_BODY_PARAM_KEY_PASSWORD = "password";
 	private static final String HTTP_BODY_PARAM_KEY_EMAIL = "email";
 	public static final String HTTP_BODY_PARAM_KEY_USER_ID = "user_id";
-	EditText mETEmail;
-	EditText mETPassword;
-	Button mBTSignIn;
-	Button mBTSignUp;
+	private EditText mETEmail;
+	private EditText mETPassword;
+	private Button mBTSignIn;
+	private Button mBTSignUp;
+	boolean mIsLoggedIn = false;
+
+	private RequestQueue mRequestQqueue;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.fragment_login);
+
+		mRequestQqueue = Volley.newRequestQueue(getApplicationContext());
 
 		uiHelper = new UiLifecycleHelper(this, callback);
 		uiHelper.onCreate(savedInstanceState);
@@ -61,6 +70,8 @@ public class LoginActivity extends BaseActivity {
 		mETPassword = (EditText) findViewById(R.id.etPassword);
 		mBTSignIn = (Button) findViewById(R.id.btSignIn);
 		mBTSignUp = (Button) findViewById(R.id.btRegister);
+		LoginButton authButton = (LoginButton) findViewById(R.id.authButton);
+		authButton.setReadPermissions(Arrays.asList("user_birthday"));
 
 		Typeface halvetica = Typeface.createFromAsset(this.getAssets(),
 				"HelveticaNeueDeskUI.ttc");
@@ -87,8 +98,8 @@ public class LoginActivity extends BaseActivity {
 		});
 
 		Session session = Session.getActiveSession();
-		if (session.isOpened()) {
-			Request.newMeRequest(session, mFaceBookMeCallback).executeAsync();
+		if (session != null) {
+			onSessionStateChange(session, session.getState(), null);
 		}
 	}
 
@@ -127,10 +138,59 @@ public class LoginActivity extends BaseActivity {
 		if (state.isOpened()) {
 			Log.i(TAG, "Logged in...");
 
-			Request.newMeRequest(session, mFaceBookMeCallback).executeAsync();
+			if (session != null) {
+				String fbAccessToken = session.getAccessToken();
+				if (!TextUtils.isEmpty(fbAccessToken)) {
+					loggedIn(fbAccessToken, true);
+				}
+			}
+			// loggedInWithFacebook(session);
+
 		} else if (state.isClosed()) {
 			Log.i(TAG, "Logged out...");
 		}
+	}
+
+	private void loggedInWithFacebook(Session session) {
+		Map<String, String> params = new HashMap<String, String>();
+
+		params.put(User.KEY_FB_ACCESS_TOKEN, session.getAccessToken());
+
+		Type loginResponseType = new TypeToken<ServerResponse<User>>() {
+		}.getType();
+
+		GsonRequest<ServerResponse<User>> loginRequest = new GsonRequest<ServerResponse<User>>(
+				Method.POST, getString(R.string.url_facebook_login),
+				loginResponseType, params, createMyReqSuccessListener(),
+				createMyReqErrorListener());
+
+		loginRequest.mContentType = "application/json";
+		mRequestQqueue.add(loginRequest);
+	}
+
+	private Listener<ServerResponse<User>> createMyReqSuccessListener() {
+		Listener<ServerResponse<User>> responseListener = new Listener<ServerResponse<User>>() {
+
+			@Override
+			public void onResponse(ServerResponse<User> response) {
+				Gson gson = new Gson();
+				Log.v(TAG,
+						"response: " + gson.toJson(response.result, User.class));
+
+			}
+		};
+		return responseListener;
+	}
+
+	private ErrorListener createMyReqErrorListener() {
+		ErrorListener errorListener = new ErrorListener() {
+
+			@Override
+			public void onErrorResponse(VolleyError error) {
+				Log.v(TAG, "Error: " + error.getMessage());
+			}
+		};
+		return errorListener;
 	}
 
 	private GraphUserCallback mFaceBookMeCallback = new GraphUserCallback() {
@@ -141,7 +201,8 @@ public class LoginActivity extends BaseActivity {
 		public void onCompleted(GraphUser user, Response response) {
 			if (user != null && !mIsLoggedIn) {
 				mIsLoggedIn = true;
-				loggedIn(user.getId());
+
+				loggedIn(user.getId(), true);
 			}
 		}
 	};
@@ -167,80 +228,29 @@ public class LoginActivity extends BaseActivity {
 		String password = mETPassword.getText().toString();
 
 		if (!password.isEmpty() && !email.isEmpty()) {
-			try {
-				HashMap<String, String> params = new HashMap<String, String>();
-
-				params.put(HTTP_BODY_PARAM_KEY_EMAIL, email);
-				params.put(HTTP_BODY_PARAM_KEY_PASSWORD,
-						StringFormat.SHA1(password));
-
-				new ServerHandler(ServerHandler.METHOD_POST_KEY, params,
-						getResources().getString(R.string.url_authenticate),
-						mSaveActionListener, true, getApplicationContext());
-			} catch (NoSuchAlgorithmException e) {
-				e.printStackTrace();
-			} catch (UnsupportedEncodingException e) {
-				e.printStackTrace();
-			}
 		} else {
 			Toast.makeText(getApplicationContext(), "all fields are required",
 					Toast.LENGTH_SHORT).show();
 		}
 	}
 
-	private void loggedIn(String userId) {
-		finish();
+	private void loggedIn(String userId, boolean isFacebook) {
+		if (!mIsLoggedIn) {
+			mIsLoggedIn = true;
+			finish();
 
-		Intent intent = new Intent(getApplicationContext(),
-				SearchTicketsActivity.class);
+			Intent intent = new Intent(getApplicationContext(),
+					FeedActivity.class);
 
-		intent.putExtra(HTTP_BODY_PARAM_KEY_USER_ID, userId);
-
-		startActivity(intent);
-	}
-
-	ServerActionListener mSaveActionListener = new ServerActionListener() {
-
-		private ProgressDialog mLoading;
-
-		@Override
-		public void preExecuteAction() {
-			mLoading = ProgressDialog.show(LoginActivity.this, "",
-					getString(R.string.loading), true);
-
-			InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-			imm.hideSoftInputFromWindow(mETPassword.getWindowToken(), 0);
-
-		}
-
-		@Override
-		public void postAction(boolean isSuccessful, Object json) {
-
-			mLoading.dismiss();
-
-			if (isSuccessful) {
-				if (json != null) {
-					JSONObject jsonObject = (JSONObject) json;
-					Log.v(TAG, "JSON: " + jsonObject.toString());
-					try {
-						if (jsonObject.getBoolean("do_exist")) {
-
-							int userId = jsonObject
-									.getInt(HTTP_BODY_PARAM_KEY_USER_ID);
-							loggedIn(String.valueOf(userId));
-
-							return;
-						}
-					} catch (JSONException e) {
-						e.printStackTrace();
-					}
-				}
+			if (isFacebook) {
+				intent.putExtra(User.KEY_AUTH_TOKEN, userId);
+			} else {
+				intent.putExtra(HTTP_BODY_PARAM_KEY_USER_ID, userId);
 			}
 
-			Toast.makeText(getApplicationContext(), "authentication failed",
-					Toast.LENGTH_SHORT).show();
+			startActivity(intent);
 		}
-	};
+	}
 
 	private OnClickListener mOnSignUpClickListener = new OnClickListener() {
 

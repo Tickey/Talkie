@@ -1,210 +1,183 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/register_background"
-    android:scrollbars="none"
-    tools:context="com.tickey.app.RegisterActivity" >
+    android:orientation="vertical" >
 
-    <LinearLayout
+    <include layout="@layout/toolbar_main" />
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-	    android:paddingTop="@dimen/activity_vertical_margin"
-	    android:paddingBottom="@dimen/activity_vertical_margin"
-        android:orientation="vertical" >
-    
-	    <ImageView
-	        android:id="@+id/imageView1"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_gravity="right"
-		    android:paddingTop="@dimen/activity_vertical_margin"
-	        android:src="@drawable/register_head" />
+        android:layout_height="match_parent"
+        android:scrollbars="none" >
 
-	    <ImageView
-	        android:id="@+id/imageView2"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_gravity="center_horizontal"
-	        android:paddingTop="48dp"
-	        android:src="@drawable/profil" />
-	    
-	    <LinearLayout
-	        android:layout_width="175dp"
-	        android:layout_height="wrap_content"
-	        android:layout_gravity="center_horizontal"
-	        android:layout_marginTop="38dp"
-	        android:orientation="vertical" >
-	    
-		    <EditText
-		        android:id="@+id/etFirstName"
-		        android:layout_width="match_parent"
-		        android:layout_height="wrap_content"
-		        android:hint="@string/first_name"
-		        style="@style/FormInputField"
-		        android:gravity="center"
-		        android:singleLine="true"
-		        android:textColor="@color/dark_gray"
-		        android:textColorHint="@color/dark_gray"
-		        android:inputType="text"
-		        android:textSize="@dimen/form_text"
-		        android:layout_gravity="center"
-		        android:ems="10" >
-		        
-		    </EditText>
-		    
-		    <ImageView
-		        android:layout_width="match_parent"
-		        android:layout_height="2dp"
-		        android:layout_marginBottom="10dp"
-		        android:layout_marginTop="10dp"
-		        android:scaleType="centerCrop"
-		        android:layout_gravity="center"
-		        android:background="@drawable/line" />
-		
-		    <EditText
-		        android:id="@+id/etLastName"
-		        android:layout_width="match_parent"
-		        android:layout_height="wrap_content"
-		        android:hint="@string/last_name"
-		        android:ems="10"
-		        android:singleLine="true"
-		        android:textColor="@color/dark_gray"
-		        android:textColorHint="@color/dark_gray"
-		        style="@style/FormInputField"
-		        android:gravity="center"
-		        android:layout_gravity="center"
-		        android:inputType="text" />
-		    
-		    <ImageView
-		        android:layout_width="match_parent"
-		        android:layout_height="2dp"
-		        android:layout_marginBottom="10dp"
-		        android:layout_marginTop="10dp"
-		        android:scaleType="fitCenter"
-		        android:layout_gravity="center"
-		        android:background="@drawable/line" />
-		
-		    <EditText
-		        android:id="@+id/etPIN"
-		        android:layout_width="match_parent"
-		        android:layout_height="wrap_content"
-		        android:hint="@string/PIN"
-		        android:ems="10"
-		        android:singleLine="true"
-		        android:textColor="@color/dark_gray"
-		        android:textColorHint="@color/dark_gray"
-		        style="@style/FormInputField"
-		        android:gravity="center"
-		        android:layout_gravity="center"
-		        android:inputType="text" />
-		    
-		    <ImageView
-		        android:layout_width="match_parent"
-		        android:layout_height="2dp"
-		        android:layout_marginBottom="10dp"
-		        android:layout_marginTop="10dp"
-		        android:scaleType="fitCenter"
-		        android:layout_gravity="center"
-		        android:background="@drawable/line" />
-		
-		    <EditText
-		        android:id="@+id/etEmail"
-		        android:layout_width="match_parent"
-		        android:layout_height="wrap_content"
-		        android:hint="@string/email"
-		        android:ems="10"
-		        android:singleLine="true"
-		        android:textColor="@color/dark_gray"
-		        android:textColorHint="@color/dark_gray"
-		        style="@style/FormInputField"
-		        android:gravity="center"
-		        android:layout_gravity="center"
-		        android:inputType="textEmailAddress" />
-		    
-		    <ImageView
-		        android:layout_width="match_parent"
-		        android:layout_height="2dp"
-		        android:layout_marginBottom="10dp"
-		        android:layout_marginTop="10dp"
-		        android:scaleType="fitCenter"
-		        android:layout_gravity="center"
-		        android:background="@drawable/line" />
-		
-		    <EditText
-		        android:id="@+id/etPassword"
-		        android:layout_width="match_parent"
-		        android:layout_height="wrap_content"
-		        android:hint="@string/password"
-		        android:ems="10"
-		        android:singleLine="true"
-		        android:textColor="@color/dark_gray"
-		        android:textColorHint="@color/dark_gray"
-		        style="@style/FormInputField"
-		        android:gravity="center"
-		        android:layout_gravity="center"
-		        android:inputType="textPassword" />
-		    
-		    <ImageView
-		        android:layout_width="match_parent"
-		        android:layout_height="2dp"
-		        android:layout_marginBottom="10dp"
-		        android:layout_marginTop="10dp"
-		        android:scaleType="fitCenter"
-		        android:layout_gravity="center"
-		        android:background="@drawable/line" />
-		
-		    <EditText
-		        android:id="@+id/etConfirmPassword"
-		        android:layout_width="match_parent"
-		        android:layout_height="wrap_content"
-		        android:hint="@string/confim_password"
-		        android:ems="10"
-		        android:singleLine="true"
-		        android:textColor="@color/dark_gray"
-		        android:textColorHint="@color/dark_gray"
-		        style="@style/FormInputField"
-		        android:gravity="center"
-		        android:layout_gravity="center"
-		        android:inputType="textPassword" />
-		    
-		    <LinearLayout
-		        android:layout_width="match_parent"
-		        android:layout_height="wrap_content"
-		        android:layout_marginTop="30dp"
-		        android:orientation="horizontal" >
-		        
-		        <ImageView
-		            android:layout_width="0dp"
-		            android:layout_height="wrap_content"
-		            android:layout_weight="1"
-		            android:scaleType="fitStart"
-		            android:src="@drawable/camera" />
-		        
-		        <ImageView
-		            android:layout_width="0dp"
-		            android:layout_height="wrap_content"
-		            android:layout_weight="1"
-		            android:scaleType="fitEnd"
-		            android:src="@drawable/gallery" />
-		        
-		    </LinearLayout>
-	    
-	    </LinearLayout>
-	    
-	    <Button
-	        android:id="@+id/btRegister"
-	        android:layout_width="228dp"
-	        android:layout_height="35dp"
-	        android:textColor="@android:color/white"
-	        android:textSize="@dimen/form_text"
-	        android:padding="0dp"
-	        android:gravity="center"
-	        android:layout_gravity="center_horizontal"
-	        android:layout_marginTop="20dp"
-	        android:background="@drawable/dark_gray_button_selector"
-	        android:text="@string/go" />
-    
-    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingTop="@dimen/activity_vertical_margin" >
 
-</ScrollView>
+            <ImageButton
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/selector_avatar" />
+
+            <LinearLayout
+                android:layout_width="175dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="38dp"
+                android:orientation="vertical" >
+
+                <EditText
+                    android:id="@+id/etFirstName"
+                    style="@style/FormInputField"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="@string/first_name"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:textColor="@color/dark_gray"
+                    android:textColorHint="@color/dark_gray"
+                    android:textSize="@dimen/form_text" >
+                </EditText>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/line"
+                    android:scaleType="centerCrop" />
+
+                <EditText
+                    android:id="@+id/etLastName"
+                    style="@style/FormInputField"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="@string/last_name"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:textColor="@color/dark_gray"
+                    android:textColorHint="@color/dark_gray" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/line"
+                    android:scaleType="fitCenter" />
+
+                <TextView
+                    android:id="@+id/et_birth_date"
+                    style="@style/FormInputField"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="@string/birth_date"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:textColor="@color/dark_gray"
+                    android:textColorHint="@color/dark_gray" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/line"
+                    android:scaleType="fitCenter" />
+
+                <EditText
+                    android:id="@+id/etEmail"
+                    style="@style/FormInputField"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress"
+                    android:singleLine="true"
+                    android:textColor="@color/dark_gray"
+                    android:textColorHint="@color/dark_gray" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/line"
+                    android:scaleType="fitCenter" />
+
+                <EditText
+                    android:id="@+id/etPassword"
+                    style="@style/FormInputField"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"
+                    android:singleLine="true"
+                    android:textColor="@color/dark_gray"
+                    android:textColorHint="@color/dark_gray" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/line"
+                    android:scaleType="fitCenter" />
+
+                <EditText
+                    android:id="@+id/etConfirmPassword"
+                    style="@style/FormInputField"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="@string/confim_password"
+                    android:inputType="textPassword"
+                    android:singleLine="true"
+                    android:textColor="@color/dark_gray"
+                    android:textColorHint="@color/dark_gray" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btRegister"
+                android:layout_width="228dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/selector_dark_gray"
+                android:gravity="center"
+                android:padding="0dp"
+                android:text="@string/go"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/form_text" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
