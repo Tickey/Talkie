@@ -14,8 +14,8 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import co.talkie_kids.talkie.R;
-import co.talkie_kids.talkie.network.utilities.ConnectionCheck;
 import co.talkie_kids.talkie.resources.Animations;
+import co.talkie_kids.talkie.utilities.network.ConnectionCheck;
 
 public class AnimationActivity extends BaseTalkieActivity {
  

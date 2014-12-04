@@ -1,13 +1,10 @@
 package co.talkie_kids.talkie.data.database;
 
-import org.w3c.dom.Comment;
-
 import android.content.ContentValues;
 import android.content.Context;
-import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import co.talkie_kids.talkie.data.models.Language;
+import co.talkie_kids.talkie.data.model.Language;
 
 public class LaguagesDataBase extends SQLiteOpenHelper {
 

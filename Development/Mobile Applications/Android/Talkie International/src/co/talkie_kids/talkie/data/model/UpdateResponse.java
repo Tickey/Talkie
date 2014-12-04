@@ -1,4 +1,4 @@
-package co.talkie_kids.talkie.data.models;
+package co.talkie_kids.talkie.data.model;
 
 import java.util.ArrayList;
 

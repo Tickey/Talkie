@@ -1,4 +1,4 @@
-package co.talkie_kids.talkie.network.utilities;
+package co.talkie_kids.talkie.utilities.network;
 
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -31,8 +31,8 @@ public class ServerHandler extends Activity {
     	mServerActionListener = serverActionListener;
         this.mHttpRequestParams = httpParams; 
         this.mUrl = url; 
-        this.mHttpMethod = httpMethod;
-        this.mIsResponseRequested = isResponseRequested;
+		this.mHttpMethod = httpMethod;
+		this.mIsResponseRequested = isResponseRequested;
         new ConnectionTask().execute(); 
     }
 

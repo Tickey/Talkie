@@ -7,9 +7,9 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.util.Log;
-import co.talkie_kids.talkie.network.utilities.DownloadFileTask;
-import co.talkie_kids.talkie.network.utilities.ServerResponseListener;
 import co.talkie_kids.talkie.utilities.StorageHelper;
+import co.talkie_kids.talkie.utilities.network.DownloadFileTask;
+import co.talkie_kids.talkie.utilities.network.ServerResponseListener;
 
 public class ImageLoader extends FileLoader {
 	
@@ -30,36 +30,27 @@ public class ImageLoader extends FileLoader {
 		if( !new File(mFilePath + hashedImageName).exists() ) {
 			DownloadFileTask downloadTask =  new DownloadFileTask();
 			/*
-			ServerResponseListener serverResponseListener =
-					new ServerResponseListener() {
-				
-						@Override
-						public void preExecuteAction() {
-							if(responseListener != null) {
-								responseListener.preExecuteAction();
-							}
-						}
-						
-						@Override
-						public void postAction(boolean isSuccessful, Object result) {
-							
-							InputStream input = (InputStream) result;
-							
-							if (isSuccessful) {
-								isSuccessful = FileLoader.saveInputStreamToStorage(
-										input, filePath);
-							}
-							
-							if(responseListener != null) {
-								
-								Bitmap bitmap = inputStreamToBitmap(input);
-								
-								responseListener.postAction(isSuccessful, bitmap);
-							}
-						}
-					};
-			downloadTask.setServerResponseListener(serverResponseListener);
-			*/
+			 * ServerResponseListener serverResponseListener = new
+			 * ServerResponseListener() {
+			 * 
+			 * @Override public void preExecuteAction() { if(responseListener !=
+			 * null) { responseListener.preExecuteAction(); } }
+			 * 
+			 * @Override public void postAction(boolean isSuccessful, Object
+			 * result) {
+			 * 
+			 * InputStream input = (InputStream) result;
+			 * 
+			 * if (isSuccessful) { isSuccessful =
+			 * FileLoader.saveInputStreamToStorage( input, filePath); }
+			 * 
+			 * if(responseListener != null) {
+			 * 
+			 * Bitmap bitmap = inputStreamToBitmap(input);
+			 * 
+			 * responseListener.postAction(isSuccessful, bitmap); } } };
+			 * downloadTask.setServerResponseListener(serverResponseListener);
+			 */
 			
 			downloadTask.execute(imageUrl);
 		} else {
