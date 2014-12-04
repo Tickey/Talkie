@@ -1,17 +1,8 @@
 package com.tickey.app;
 
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
-
 import android.content.Intent;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
-import android.content.pm.PackageManager.NameNotFoundException;
-import android.content.pm.Signature;
 import android.os.Bundle;
 import android.os.Handler;
-import android.util.Base64;
-import android.util.Log;
 
 import com.facebook.Request;
 import com.facebook.Request.GraphUserCallback;
@@ -44,7 +35,9 @@ public class SplashScreenActivity extends BaseActivity {
 
 		Session session = Session.getActiveSession();
 		if (session.isOpened()) {
-			Request.newMeRequest(session, mFaceBookMeCallback).executeAsync();
+			session.close();
+			notLoggedIn();
+			//Request.newMeRequest(session, mFaceBookMeCallback).executeAsync();
 		} else {
 			notLoggedIn();
 		}
@@ -108,6 +101,7 @@ public class SplashScreenActivity extends BaseActivity {
 
 		mNextIntent = new Intent(getApplicationContext(),
 				SearchTicketsActivity.class);
+		
 
 		mNextIntent.putExtra(LoginActivity.HTTP_BODY_PARAM_KEY_USER_ID, userId);
 		splashScreen();
@@ -141,12 +135,12 @@ public class SplashScreenActivity extends BaseActivity {
 					// come
 					// back when it presses back key
 
-					finish();
+					//finish();
 
 					if (!mIsBackButtonPressed && !mIsStarted) {
-						finish();
 						mIsStarted = true;
-						startActivity(mNextIntent);
+						//finish();
+						//startActivity(mNextIntent);
 					}
 
 				}
@@ -156,8 +150,8 @@ public class SplashScreenActivity extends BaseActivity {
 							// be
 							// called
 		} else {
-			finish();
-			startActivity(mNextIntent);
+			//finish();
+			//startActivity(mNextIntent);
 		}
 	}
 

@@ -42,7 +42,7 @@ public class RoundedImageView extends ImageView {
 		paint.setAntiAlias(true);
 
 		paintBorder = new Paint();
-		setBorderColor(Color.RED);
+		setBorderColor(Color.GRAY);
 		paintBorder.setAntiAlias(true);
 		/*
 		this.setLayerType(LAYER_TYPE_SOFTWARE, paintBorder);

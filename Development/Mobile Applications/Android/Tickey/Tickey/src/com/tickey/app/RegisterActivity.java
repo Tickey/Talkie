@@ -1,35 +1,26 @@
 package com.tickey.app;
 
-import java.io.UnsupportedEncodingException;
-import java.security.NoSuchAlgorithmException;
-import java.util.HashMap;
+import java.util.Calendar;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import android.app.ProgressDialog;
-import android.content.Context;
-import android.content.Intent;
+import android.app.DatePickerDialog;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.inputmethod.EditorInfo;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.TextView.OnEditorActionListener;
 import android.widget.Toast;
 
-import com.tickey.app.utils.format.StringFormat;
-import com.tickey.app.utils.server.ServerActionListener;
-import com.tickey.app.utils.server.ServerHandler;
 
 public class RegisterActivity extends BaseActivity {
 
@@ -44,6 +35,7 @@ public class RegisterActivity extends BaseActivity {
 			getSupportFragmentManager().beginTransaction()
 					.add(R.id.container, new PlaceholderFragment()).commit();
 		}
+		
 	}
 
 	/**
@@ -54,16 +46,21 @@ public class RegisterActivity extends BaseActivity {
 		private static final String HTTP_BODY_PARAM_KEY_USER_ID = "user_id";
 		private static final String HTTP_BODY_PARAM_KEY_PASSWORD = "password";
 		private static final String HTTP_BODY_PARAM_KEY_EMAIL = "email";
-		private static final String HTTP_BODY_PARAM_KEY_PIN = "first_name";
+		private static final String HTTP_BODY_PARAM_LAST_NAME = "first_name";
 		private static final String HTTP_BODY_PARAM_FIRST_NAME = "last_name";
-		private static final String HTTP_BODY_PARAM_LAST_NAME = "pin";
-		EditText mETEmail;
-		EditText mETPassword;
-		EditText mETFirstName;
-		EditText mETLastName;
-		EditText mETPIN;
-		EditText mETConfirmPassword;
-		Button mBTSignUp;
+		private static final String HTTP_BODY_PARAM_BIRTHDAY = "birthday";
+		private EditText mETEmail;
+		private EditText mETPassword;
+		private EditText mETFirstName;
+		private EditText mETLastName;
+		private TextView mDateTextView;
+		private EditText mETConfirmPassword;
+		private Button mBTSignUp;
+		private Toolbar mToolbar;
+
+		private int year;
+		private int month;
+		private int day;
 
 		public PlaceholderFragment() {
 		}
@@ -76,12 +73,15 @@ public class RegisterActivity extends BaseActivity {
 
 			mETEmail = (EditText) rootView.findViewById(R.id.etEmail);
 			mETPassword = (EditText) rootView.findViewById(R.id.etPassword);
-			mETPIN = (EditText) rootView.findViewById(R.id.etPIN);
+			mDateTextView = (TextView) rootView
+					.findViewById(R.id.et_birth_date);
 			mETConfirmPassword = (EditText) rootView
 					.findViewById(R.id.etConfirmPassword);
 			mETFirstName = (EditText) rootView.findViewById(R.id.etFirstName);
 			mETLastName = (EditText) rootView.findViewById(R.id.etLastName);
 			mBTSignUp = (Button) rootView.findViewById(R.id.btRegister);
+
+			mToolbar = (Toolbar) rootView.findViewById(R.id.toolbar);
 
 			return rootView;
 		}
@@ -90,12 +90,24 @@ public class RegisterActivity extends BaseActivity {
 		public void onActivityCreated(Bundle savedInstanceState) {
 			super.onActivityCreated(savedInstanceState);
 
+			ActionBarActivity activity = (ActionBarActivity) getActivity();
+			activity.setSupportActionBar(mToolbar);
+
+			mToolbar.setNavigationIcon(R.drawable.abc_ic_ab_back_mtrl_am_alpha);
+			mToolbar.setNavigationOnClickListener(new OnClickListener() {
+
+				@Override
+				public void onClick(View v) {
+					getActivity().finish();
+				}
+			});
+
 			Typeface halvetica = Typeface.createFromAsset(getActivity()
 					.getAssets(), "HelveticaNeueDeskUI.ttc");
 			mETEmail.setTypeface(halvetica);
 			mETPassword.setTypeface(halvetica);
 			mETConfirmPassword.setTypeface(halvetica);
-			mETPIN.setTypeface(halvetica);
+			mDateTextView.setTypeface(halvetica);
 			mETFirstName.setTypeface(halvetica);
 			mETLastName.setTypeface(halvetica);
 			mBTSignUp.setTypeface(halvetica);
@@ -113,7 +125,53 @@ public class RegisterActivity extends BaseActivity {
 					});
 
 			mBTSignUp.setOnClickListener(mOnRegisterClickListener);
+			setCurrentDateOnView();
 		}
+
+		// display current date
+		public void setCurrentDateOnView() {
+
+			final Calendar c = Calendar.getInstance();
+			year = c.get(Calendar.YEAR);
+			month = c.get(Calendar.MONTH);
+			day = c.get(Calendar.DAY_OF_MONTH);
+
+			// set current date into textview
+			mDateTextView.setText(new StringBuilder()
+					// Month is 0 based, just add 1
+					.append(month + 1).append("-").append(day).append("-")
+					.append(year).append(" "));
+
+			// set current date into datepicker
+			mDateTextView.setOnClickListener(new OnClickListener() {
+
+				@Override
+				public void onClick(View v) {
+					new DatePickerDialog(getActivity(), datePickerListener,
+							year, month, day).show();
+				}
+			});
+
+		}
+
+		private DatePickerDialog.OnDateSetListener datePickerListener = new DatePickerDialog.OnDateSetListener() {
+
+			// when dialog box is closed, below method will be called.
+			public void onDateSet(DatePicker view, int selectedYear,
+					int selectedMonth, int selectedDay) {
+				year = selectedYear;
+				month = selectedMonth;
+				day = selectedDay;
+
+				// set selected date into textview
+				mDateTextView.setText(new StringBuilder().append(month + 1)
+						.append("-").append(day).append("-").append(year)
+						.append(" "));
+
+				// set selected date into datepicker also
+
+			}
+		};
 
 		private OnClickListener mOnRegisterClickListener = new OnClickListener() {
 
@@ -129,7 +187,7 @@ public class RegisterActivity extends BaseActivity {
 			String confirmPassword = mETConfirmPassword.getText().toString();
 			String firstName = mETFirstName.getText().toString();
 			String lastName = mETLastName.getText().toString();
-			String pin = mETPIN.getText().toString();
+			String pin = mDateTextView.getText().toString();
 
 			if (!password.isEmpty() && !email.isEmpty()
 					&& !confirmPassword.isEmpty() && !firstName.isEmpty()
@@ -137,28 +195,6 @@ public class RegisterActivity extends BaseActivity {
 
 				if (password.equals(confirmPassword)) {
 
-					try {
-						HashMap<String, String> params = new HashMap<String, String>();
-
-						params.put(HTTP_BODY_PARAM_KEY_EMAIL, email);
-						params.put(HTTP_BODY_PARAM_KEY_PASSWORD,
-								StringFormat.SHA1(password));
-						params.put(HTTP_BODY_PARAM_KEY_PIN, pin);
-						params.put(HTTP_BODY_PARAM_FIRST_NAME, firstName);
-						params.put(HTTP_BODY_PARAM_LAST_NAME, lastName);
-
-						new ServerHandler(ServerHandler.METHOD_POST_KEY,
-								params, getResources().getString(
-										R.string.url_register),
-								mSaveActionListener, true, getActivity()
-										.getApplicationContext());
-					} catch (NoSuchAlgorithmException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					} catch (UnsupportedEncodingException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
 				} else {
 					Toast.makeText(getActivity().getApplicationContext(),
 							"passwords should match", Toast.LENGTH_SHORT)
@@ -170,59 +206,5 @@ public class RegisterActivity extends BaseActivity {
 			}
 		}
 
-		ServerActionListener mSaveActionListener = new ServerActionListener() {
-
-			private ProgressDialog mLoading;
-
-			@Override
-			public void preExecuteAction() {
-				mLoading = ProgressDialog.show(getActivity(), "",
-						getString(R.string.loading), true);
-
-				InputMethodManager imm = (InputMethodManager) getActivity()
-						.getSystemService(Context.INPUT_METHOD_SERVICE);
-				imm.hideSoftInputFromWindow(mETPassword.getWindowToken(), 0);
-
-			}
-
-			@Override
-			public void postAction(boolean isSuccessful, Object json) {
-
-				mLoading.dismiss();
-
-				if (isSuccessful) {
-					if (json != null) {
-						JSONObject jsonObject = (JSONObject) json;
-						Log.v(TAG, "JSON: " + jsonObject.toString());
-						try {
-							int userId = jsonObject
-									.getInt(HTTP_BODY_PARAM_KEY_USER_ID);
-
-							if (userId != 0) {
-								getActivity().finish();
-
-								Intent intent = new Intent(getActivity()
-										.getApplicationContext(),
-										SearchTicketsActivity.class);
-
-								intent.putExtra(HTTP_BODY_PARAM_KEY_USER_ID,
-										userId);
-
-								getActivity().startActivity(intent);
-
-								return;
-							}
-						} catch (JSONException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
-					}
-				}
-
-				Toast.makeText(getActivity().getApplicationContext(),
-						"registration failed", Toast.LENGTH_SHORT).show();
-			}
-		};
 	}
-
 }
