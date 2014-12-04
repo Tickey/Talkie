@@ -2,16 +2,24 @@ package com.tickey.app.view.adapter;
 
 import java.util.ArrayList;
 
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.android.volley.toolbox.ImageLoader;
+import com.tickey.app.R;
+import com.tickey.app.common.BaseApplication;
 import com.tickey.app.data.model.New;
 import com.tickey.app.view.viewholder.NewViewHolder;
 
 public class NewsAdapter extends RecyclerView.Adapter<NewViewHolder> {
 
 	private ArrayList<New> mNewsData;
+	private ImageLoader mImageLoader = BaseApplication.getInstance()
+			.getImageLoader();
+	private Context mContext;
 
 	public NewsAdapter(ArrayList<New> itemsData) {
 		this.mNewsData = itemsData;
@@ -19,16 +27,14 @@ public class NewsAdapter extends RecyclerView.Adapter<NewViewHolder> {
 
 	// Create new views (invoked by the layout manager)
 	@Override
-	public NewViewHolder onCreateViewHolder(ViewGroup parent,
-			int viewType) {
+	public NewViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 		// create a new view
-		/*
-		View itemLayoutView = LayoutInflater.from(parent.getContext()).inflate(
-				R.layout.item_layout, null);
-*/
+		mContext = parent.getContext();
+		View itemLayoutView = LayoutInflater.from(mContext).inflate(
+				R.layout.list_item_new, parent, false);
 		// create ViewHolder
 
-		NewViewHolder viewHolder = new NewViewHolder(parent);
+		NewViewHolder viewHolder = new NewViewHolder(itemLayoutView);
 		return viewHolder;
 	}
 
@@ -38,11 +44,14 @@ public class NewsAdapter extends RecyclerView.Adapter<NewViewHolder> {
 
 		// - get data from your itemsData at this position
 		// - replace the contents of the view with that itemsData
-/*
-		viewHolder.txtViewTitle.setText(mNewsData[position].getTitle());
-		viewHolder.imgViewIcon.setImageResource(mNewsData[position]
-				.getImageUrl());
-		*/
+		
+		New newData = mNewsData.get(position);
+		viewHolder.image.setImageUrl(newData.postImageUrl, mImageLoader);
+		viewHolder.likeCount.setText(mContext.getResources().getQuantityString(R.plurals.likes, newData.likes));
+		viewHolder.message.setText(newData.shortMessage);
+		viewHolder.owner.setText(newData.username);
+		viewHolder.ownerAvatar.setImageUrl(newData.ownerAvatarUrl, mImageLoader);
+		
 
 	}
 

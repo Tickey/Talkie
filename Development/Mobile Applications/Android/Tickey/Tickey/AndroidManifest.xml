@@ -17,16 +17,17 @@
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
 
     <application
+        android:name="com.tickey.app.common.BaseApplication"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.tickey.app.SplashScreenActivity"
+            android:name="com.tickey.app.activity.SplashScreenActivity"
             android:label="@string/app_name" >
         </activity>
         <activity
-            android:name="com.tickey.app.LoginActivity"
+            android:name="com.tickey.app.activity.LoginActivity"
             android:label="@string/app_name"
             android:windowSoftInputMode="adjustPan" >
             <intent-filter>
@@ -36,11 +37,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.tickey.app.RegisterActivity"
+            android:name="com.tickey.app.activity.RegisterActivity"
             android:label="@string/register"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name="com.tickey.app.FeedActivity"
+            android:name="com.tickey.app.activity.FeedActivity"
             android:label="@string/feed" />
         <activity
             android:name="com.tickey.app.ChooseAndBuyTicketActivity"

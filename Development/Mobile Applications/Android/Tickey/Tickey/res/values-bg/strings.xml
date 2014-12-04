@@ -3,6 +3,7 @@
 
     <string name="app_name">Tickey</string>
     <string name="register">Регистрация</string>
+    <string name="share">Сподели</string>
     <string name="feed">Iнформационен Kанал</string>
     <string name="birth_date">дата на раждане</string>
     <string name="scanning_lines"><![CDATA[търси се <font color="#8DC43F">линията...</font>]]></string>
@@ -24,5 +25,10 @@
     <string name="sign_up"><u>не си регистриран?</u></string>
     <string name="facebook_login">влез с facebook</string>
     <string name="app_id">773538616052349</string>
+
+    <plurals name="likes">
+        <item quantity="one">like</item>
+        <item quantity="other">likes</item>
+    </plurals>
 
 </resources>

@@ -10,9 +10,10 @@ import android.graphics.Paint;
 import android.graphics.Shader;
 import android.graphics.drawable.BitmapDrawable;
 import android.util.AttributeSet;
-import android.widget.ImageView;
 
-public class RoundedImageView extends ImageView {
+import com.android.volley.toolbox.NetworkImageView;
+
+public class RoundedImageView extends NetworkImageView {
 	private int borderWidth = 4;
 	private int viewWidth;
 	private int viewHeight;
